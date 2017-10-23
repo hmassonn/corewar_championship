@@ -6,7 +6,7 @@
 /*   By: hmassonn <hmassonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/20 13:43:50 by hmassonn          #+#    #+#             */
-/*   Updated: 2017/10/23 14:24:58 by hmassonn         ###   ########.fr       */
+/*   Updated: 2017/10/23 15:35:40 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char		*catch_signal(int signal)
 	return ("UNKNOWN_ERROR");
 }
 
-char		*ft_fork(char *cmd, char **args, char **ev)
+char		*my_fork(char *cmd, char **args, char **ev)
 {
 	pid_t			father;
 

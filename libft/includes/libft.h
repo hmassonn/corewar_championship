@@ -6,7 +6,7 @@
 /*   By: hmassonn <hmassonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 14:14:46 by hmassonn          #+#    #+#             */
-/*   Updated: 2017/09/16 22:01:45 by hmassonn         ###   ########.fr       */
+/*   Updated: 2017/10/23 15:14:48 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -186,5 +186,7 @@ char			**ft_arrdup(char **tab);
 char			**ft_arradd(char **tab, char *str);
 int				get_next_line(int fd, char **line);
 int				ft_printf(const char *restrict format, ...);
+double	 		ft_pow(double n, int exp);
+int				ft_abs(int n);
 
 #endif

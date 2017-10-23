@@ -6,7 +6,7 @@
 /*   By: hmassonn <hmassonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/20 13:43:50 by hmassonn          #+#    #+#             */
-/*   Updated: 2017/10/23 14:34:16 by hmassonn         ###   ########.fr       */
+/*   Updated: 2017/10/23 15:35:47 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	create_champ(int fd)
 // 	exe[0] = ft_strdup("ressources/asm");
 // 	exe[1] = ft_strdup(name);
 // 	exe[2] = NULL;
-// 	ft_fork("ressources/asm", exe, NULL);
+// 	my_fork("ressources/asm", exe, NULL);
 // 	ft_deltab(&exe);
 // }
 

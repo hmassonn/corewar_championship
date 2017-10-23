@@ -6,7 +6,7 @@
 /*   By: hmassonn <hmassonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/20 13:43:50 by hmassonn          #+#    #+#             */
-/*   Updated: 2017/10/23 13:50:36 by hmassonn         ###   ########.fr       */
+/*   Updated: 2017/10/23 15:35:27 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,6 @@ void	initial(char **av, char ***pool);
 
 void 	my_error(char *str);
 char	*catch_signal(int signal);
-char	*ft_fork(char *cmd, char **args, char **ev);
+char	*my_fork(char *cmd, char **args, char **ev);
 
 #endif
