@@ -6,7 +6,7 @@
 /*   By: clanier <clanier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/16 19:56:50 by clanier           #+#    #+#             */
-/*   Updated: 2017/10/23 15:46:02 by hmassonn         ###   ########.fr       */
+/*   Updated: 2017/10/23 18:46:57 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -151,7 +151,7 @@ t_cpu					*ft_aff(t_mars **mars, t_cpu *cpu);
 int						ft_get_gap(t_cpu *cpu);
 void					ft_fill_arena(t_mars *mars, t_cpu **cpu);
 void					ft_get_players_uid(t_mars *mars, t_cpu *cpu);
-t_mars					*ft_new_mars(t_cpu **cpu, int dump);
+t_mars					*ft_new_mars(t_cpu **cpu, char opt, int dump);
 void					ft_del_mars(t_mars *mars);
 t_cpu					*ft_math(t_mars **mars, t_cpu *cpu, int math);
 long long int			ft_get_op_arg(t_mars *mars,

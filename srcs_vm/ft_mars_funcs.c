@@ -6,7 +6,7 @@
 /*   By: clanier <clanier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/07 12:11:23 by clanier           #+#    #+#             */
-/*   Updated: 2017/10/23 15:22:59 by hmassonn         ###   ########.fr       */
+/*   Updated: 2017/10/23 18:45:42 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void	ft_get_players_uid(t_mars *mars, t_cpu *cpu)
 		mars->players[i++] = 0;
 }
 
-t_mars	*ft_new_mars(t_cpu **cpu, int dump)
+t_mars	*ft_new_mars(t_cpu **cpu, char opt, int dump)
 {
 	t_mars	*mars;
 
@@ -88,12 +88,12 @@ t_mars	*ft_new_mars(t_cpu **cpu, int dump)
 	mars->modif = true;
 	mars->live_check = 0;
 	mars->cycle_to_die = CYCLE_TO_DIE;
-	mars->opt = 0;
+	mars->opt = opt;
 	mars->dump = dump;
 	mars->fat_buf_len = 0;
 	ft_get_players_uid(mars, *cpu);
-	// if (opt & 2)
-	// 	ft_mlx_init(mars);
+	if (opt & 2)
+		ft_mlx_init(mars);
 	return (mars);
 }
 

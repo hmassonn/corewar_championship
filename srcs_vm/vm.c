@@ -6,7 +6,7 @@
 /*   By: clanier <clanier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/16 19:56:51 by clanier           #+#    #+#             */
-/*   Updated: 2017/10/23 15:58:40 by hmassonn         ###   ########.fr       */
+/*   Updated: 2017/10/23 19:02:54 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,10 +105,11 @@ void		ft_vm(char **av)
 	int		dump = -1;
 
 	ft_get_opt(&opt, &dump, av, 4);
+	opt = 0b00100000;
 	cpu = NULL;
 	if (!ft_get_players(av, &cpu))
 		my_error("probleme de players");
-	mars = ft_new_mars(&cpu, dump);
+	mars = ft_new_mars(&cpu, opt, dump);
 	// if (opt & 0b00000100)
 	// 	ft_ncurses_init();
 	ft_run_mars(mars, cpu);
