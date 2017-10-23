@@ -6,7 +6,7 @@
 /*   By: clanier <clanier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/07 12:02:49 by clanier           #+#    #+#             */
-/*   Updated: 2017/10/23 18:37:53 by hmassonn         ###   ########.fr       */
+/*   Updated: 2017/10/23 20:52:36 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ void	ft_print_winner(t_mars *mars, t_cpu *cpu)
 	lst = cpu;
 	while (lst)
 	{
-		printf("mars->last_live %d\n", mars->last_live);
 		if (lst->uid == mars->last_live)
 		{
 			mars->last_live = lst->color;

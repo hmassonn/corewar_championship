@@ -6,7 +6,7 @@
 /*   By: hmassonn <hmassonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 15:04:15 by hmassonn          #+#    #+#             */
-/*   Updated: 2017/09/16 22:16:14 by hmassonn         ###   ########.fr       */
+/*   Updated: 2017/10/23 20:43:17 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,49 +15,29 @@
 #include <fcntl.h>
 #include "libft.h"
 
-static char			*clean_back(char *str)
+int		get_next_line(const int fd, char **line)
 {
-	int			i;
+	char		buf[BUFF_SIZE + 1];
+	static char	*remains[42000];
+	char		*tmp;
+	int			ret;
 
-	i = -1;
-	while (str[++i])
-	{
-		str[i] = (str[i] != '\n') ? str[i] : '\0';
-		if (str[i] == '\0')
-			return (str);
-	}
-	return (str);
-}
-
-static int			get_input(int fd, char **line)
-{
-	char		buff[BUFF_SIZE];
-	int			stop;
-
-	stop = 0;
-	*line = (char *)ft_memalloc(sizeof(char));
-	ft_bzero(buff, BUFF_SIZE);
-	ft_bzero(*line, sizeof(char));
-	while ((read(fd, buff, BUFF_SIZE - 1)) > 0)
-	{
-		if (ft_strchr(buff, '\n') || ft_strchr(buff, '\0'))
-			stop = 1;
-		if (!(*line))
-			*line = clean_back(buff);
-		else
-			*line = ft_freejoin(*line, clean_back(buff));
-		ft_bzero(buff, BUFF_SIZE);
-		if (!(stop))
-			*line = ft_realloc(*line, BUFF_SIZE - 1);
-		else
-			return (1);
-	}
-	return (0);
-}
-
-int					get_next_line(int fd, char **line)
-{
-	if (fd >= 0)
-		return (get_input(fd, line));
+	if ((ret = 1) && (fd < 0 || !line || BUFF_SIZE < 1))
+		return (-1);
+	ft_bzero(buf, BUFF_SIZE + 1);
+	if (!(tmp = NULL) && remains[fd] && remains[fd][0])
+		tmp = ft_strdup(remains[fd]);
+	while (!ft_strchr(tmp, '\n') && (ret = read(fd, &buf, BUFF_SIZE)) != 0)
+		if (ret < 0 || (!(buf[ret] = 0)
+		&& !(tmp = ft_freejoin(tmp, buf))))
+			return (-1);
+	if (remains[fd])
+		free(remains[fd]);
+	if (ret == 0 && !tmp && !(remains[fd] = NULL))
+		return (0);
+	remains[fd] = ft_strchr(tmp, '\n') ?
+	ft_strdup(ft_strchr(tmp, '\n') + 1) : NULL;
+	*line = ft_strcdup(tmp, '\n');
+	free(tmp);
 	return (1);
 }

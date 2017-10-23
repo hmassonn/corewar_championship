@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hmassonn <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hmassonn <hmassonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 11:27:58 by hmassonn          #+#    #+#             */
-/*   Updated: 2016/11/11 14:14:10 by hmassonn         ###   ########.fr       */
+/*   Updated: 2017/10/23 20:47:16 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	size_t	i;
+	const char	find = c;
 
-	i = 0;
-	while (s[i])
+	if (!s)
+		return (NULL);
+	while (*s != find)
 	{
-		if (s[i] == (t_unch)c)
-			return ((char *)s + i);
-		i++;
+		if (*s == '\0')
+			return (0);
+		s++;
 	}
-	if (!s[i] && !(t_unch)c)
-		return ((char *)s + i);
-	return (NULL);
+	return ((char *)s);
 }

@@ -6,7 +6,7 @@
 /*   By: hmassonn <hmassonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 14:14:46 by hmassonn          #+#    #+#             */
-/*   Updated: 2017/10/23 15:14:48 by hmassonn         ###   ########.fr       */
+/*   Updated: 2017/10/23 20:44:48 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,6 +113,7 @@ void			*ft_memdup(const void *s, size_t n);
 size_t			ft_strlen(const char *s);
 size_t			ft_strnlen(const char *s, char n);
 char			*ft_strdup(const char *s1);
+char			*ft_strcdup(const char *s, char c);
 char			*ft_strcpy(char *dst, const char *src);
 char			*ft_strcpyend(char *dst, const char *src);
 char			*ft_strncpy(char *dst, const char *src, size_t len);

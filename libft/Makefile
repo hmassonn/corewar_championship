@@ -6,7 +6,7 @@
 #    By: hmassonn <hmassonn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/02 18:56:27 by hmassonn          #+#    #+#              #
-#    Updated: 2017/10/23 15:15:03 by hmassonn         ###   ########.fr        #
+#    Updated: 2017/10/23 20:45:03 by hmassonn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,7 +77,7 @@ SRC =	$(STDIO_SRCS)	\
 	  ft_sqrt.c ft_strnlen.c get_next_line.c ft_putwchar.c ft_abs.c		\
 	  ft_puthexa.c ft_sqrt.c ft_strcpyend.c ft_strextend.c				\
 	  ft_strextendend.c ft_putcharnb.c ft_itoa_base.c ft_itoa_basemaj.c	\
-	  ft_wstrlen.c ft_uitoamax.c ft_lstswap.c ft_lstswap.c				\
+	  ft_wstrlen.c ft_uitoamax.c ft_lstswap.c ft_lstswap.c ft_strcdup.c	\
 	  ft_strndup.c ft_memdup.c ft_realloc.c ft_lstsort.c ft_lstlen.c	\
 	  ft_wstrextend.c ft_wstrextendend.c ft_wstrcpyend.c ft_arrlen.c	\
 	  ft_arrdelone.c ft_arradd.c ft_deltab.c ft_freejoin.c ft_explode.c

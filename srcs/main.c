@@ -6,7 +6,7 @@
 /*   By: hmassonn <hmassonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/20 13:43:50 by hmassonn          #+#    #+#             */
-/*   Updated: 2017/10/23 19:18:24 by hmassonn         ###   ########.fr       */
+/*   Updated: 2017/10/23 20:52:09 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ void	fight(char **pool)
 		while (j < POP_SIZE)
 		{
 			arg[3] = ft_strjoin(pool[j], ".cor");
-			ft_arrprint(arg);
 			ft_vm(arg);
 			free(arg[3]);
 			j++;
@@ -70,7 +69,7 @@ void	fight(char **pool)
 	free(arg[1]);
 	free(arg);
 }
-
+//
 // int			main(void)
 // {
 // 	char **arg;

@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strcdup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hmassonn <hmassonn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: clanier <clanier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 19:22:44 by hmassonn          #+#    #+#             */
-/*   Updated: 2017/10/23 20:49:48 by hmassonn         ###   ########.fr       */
+/*   Created: 2017/02/02 18:28:05 by clanier           #+#    #+#             */
+/*   Updated: 2017/10/23 20:44:03 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char	*ft_strcdup(const char *s, char c)
 {
 	char	*str;
 	int		i;
+	int		size;
 
 	i = 0;
-	if (!s)
+	size = 0;
+	while (s[size] && s[size] != c)
+		size++;
+	if (!(str = (char*)ft_memalloc(sizeof(char) * (size + 1))))
 		return (NULL);
-	str = (char*)malloc(sizeof(char) * (ft_strlen(s) + 1));
-	if (!str)
-		return (NULL);
-	while (s[i] != '\0')
+	while (s[i] && s[i] != c)
 	{
 		str[i] = s[i];
 		i++;
