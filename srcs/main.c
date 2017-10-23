@@ -6,11 +6,12 @@
 /*   By: hmassonn <hmassonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/20 13:43:50 by hmassonn          #+#    #+#             */
-/*   Updated: 2017/10/23 13:47:52 by hmassonn         ###   ########.fr       */
+/*   Updated: 2017/10/23 14:32:20 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "algen.h"
+#include "op.h"
 
 void	fight(char **pool)
 {
@@ -47,7 +48,7 @@ int		main(int ac, char **av)
 	if (!(pool = (char**)malloc(sizeof(char*) * (POP_SIZE + 1))))
 		my_error("malloc main");
 	initial(av, &pool);
-	fight(pool);
+	// fight(pool);
 	ft_deltab(&pool);
 	return (0);
 }

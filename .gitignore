@@ -2,6 +2,7 @@ libft/*.o
 libft/libc/*.o
 libft/stdio/*.o
 libft/libft.a
+champions
 obj
 algen
 *.dSYM

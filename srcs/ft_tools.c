@@ -6,11 +6,12 @@
 /*   By: hmassonn <hmassonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/20 13:43:50 by hmassonn          #+#    #+#             */
-/*   Updated: 2017/10/23 13:44:42 by hmassonn         ###   ########.fr       */
+/*   Updated: 2017/10/23 14:24:58 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "algen.h"
+#include "op.h"
 
 void 		my_error(char *str)
 {

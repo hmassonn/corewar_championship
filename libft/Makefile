@@ -6,11 +6,13 @@
 #    By: hmassonn <hmassonn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/02 18:56:27 by hmassonn          #+#    #+#              #
-#    Updated: 2017/09/16 21:01:39 by hmassonn         ###   ########.fr        #
+#    Updated: 2017/10/23 14:18:51 by hmassonn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+
+CC = gcc
 
 INC = -I./includes
 

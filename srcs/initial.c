@@ -6,11 +6,12 @@
 /*   By: hmassonn <hmassonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/20 13:43:50 by hmassonn          #+#    #+#             */
-/*   Updated: 2017/10/23 13:44:39 by hmassonn         ###   ########.fr       */
+/*   Updated: 2017/10/23 14:34:16 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "algen.h"
+#include "op.h"
 
 void	find_name(char (*name)[19])
 {
@@ -62,18 +63,18 @@ void	create_champ(int fd)
 		my_error("probleme de write sur le champion body");
 }
 
-void	assemble(char name[19])
-{
-	char	**exe;
-
-	if (!(exe = (char**)malloc(sizeof(char*) * 3)))
-		my_error("malloc assemble");
-	exe[0] = ft_strdup("ressources/asm");
-	exe[1] = ft_strdup(name);
-	exe[2] = NULL;
-	ft_fork("ressources/asm", exe, NULL);
-	ft_deltab(&exe);
-}
+// void	assemble(char name[19])
+// {
+// 	char	**exe;
+//
+// 	if (!(exe = (char**)malloc(sizeof(char*) * 3)))
+// 		my_error("malloc assemble");
+// 	exe[0] = ft_strdup("ressources/asm");
+// 	exe[1] = ft_strdup(name);
+// 	exe[2] = NULL;
+// 	ft_fork("ressources/asm", exe, NULL);
+// 	ft_deltab(&exe);
+// }
 
 void	initial(char **av, char ***pool)
 {
@@ -88,7 +89,8 @@ void	initial(char **av, char ***pool)
 		create_champ_header(fd, name);
 		create_champ(fd);
 		close(fd);
-		assemble(name);
+		// assemble(name);
+		ft_asm(name);
 		(*pool)[x] = ft_strndup(name, 16);
 		x++;
 	}

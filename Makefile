@@ -6,7 +6,7 @@
 #    By: hmassonn <hmassonn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/02 18:56:27 by hmassonn          #+#    #+#              #
-#    Updated: 2017/10/23 13:55:48 by hmassonn         ###   ########.fr        #
+#    Updated: 2017/10/23 14:14:34 by hmassonn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,39 +43,45 @@ ASM_NAME =	asm.c			\
 			get_line.c		\
 			op_tools.c
 
-SRC = $(addprefix $(SRC_PATH),$(SRC_NAME))
-ASM = $(addprefix $(ASM_PATH),$(ASM_NAME))
+
 INC = $(addprefix -I, $(INC_PATH))
 
-SRCS =	$(SRC)	\
-		$(ASM)
-
-OBJ_NAME = $(SRCS:.c=.o)
-OBJ = $(addprefix $(OBJ_PATH),$(OBJ_NAME))
+OBJ_ASM = $(addsuffix .o,			\
+		  $(addprefix $(OBJ_PATH),	\
+		  $(addprefix $(ASM_PATH),	\
+		  $(basename $(ASM_NAME)))))
+OBJ_LO = $(addsuffix .o,			\
+		  $(addprefix $(OBJ_PATH),	\
+		  $(addprefix $(SRC_PATH),	\
+		  $(basename $(SRC_NAME)))))
 
 LIB_NAME = libft.a
 LIB_FILE = $(addprefix $(LIB_PATH),$(LIB_NAME))
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ_LO) $(OBJ_ASM)
 	@echo "\033[34m[  LIBRAIRIES  ]\033[0m"
 	@make -C $(LIB_PATH)
 	@echo "\033[34m[ MAIN PROJECT ]\033[0m"
 	@echo "\033[32m[$(NAME)]\t\t(release)\033[0m"
-	$(CC) $(CFLAGS) -o $(NAME) $(INC) $(OBJ) $(LIB_FILE)
+	$(CC) $(CFLAGS) -o $(NAME) $(INC) $^ $(LIB_FILE)
 
-$(OBJ): $(SRCS)
+$(OBJ_PATH)$(SRC_PATH)%.o: $(SRC_PATH)%.c
 	@mkdir -p $(OBJ_PATH)
-	@mkdir -p $(addprefix $(OBJ_PATH),$(SRC_PATH))
-	@mkdir -p $(addprefix $(OBJ_PATH),$(ASM_PATH))
+	@mkdir -p $(OBJ_PATH)$(SRC_PATH)
+	$(CC) -g $(CFLAGS) $(INC) -o $@ -c $<
+
+$(OBJ_PATH)$(ASM_PATH)%.o: $(ASM_PATH)%.c
+	@mkdir -p $(OBJ_PATH)
+	@mkdir -p $(OBJ_PATH)$(ASM_PATH)
 	$(CC) -g $(CFLAGS) $(INC) -o $@ -c $<
 
 re: fclean all
 
 clean:
 	@rm -rf $(OBJ_PATH)
-	@(cd $(LIB_PATH) && $(MAKE) $@)
+	@make -C $(LIB_PATH) clean
 
 fclean: clean
 	@rm -f $(NAME)

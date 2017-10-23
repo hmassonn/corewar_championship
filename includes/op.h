@@ -6,7 +6,7 @@
 /*   By: zaz <zaz@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/10/04 11:33:27 by zaz               #+#    #+#             */
-/*   Updated: 2017/02/28 08:39:15 by hmassonn         ###   ########.fr       */
+/*   Updated: 2017/10/23 14:30:30 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,12 @@ typedef struct			s_instruct
 }						t_inst;
 
 /*
+** in asm .c
+*/
+
+void	ft_asm(char *name);
+
+/*
 ** in take.c
 */
 
@@ -175,7 +181,7 @@ int						arg_binary(char *name);
 
 void					free_tab(char **tab);
 void					free_champ(t_inst **champ);
-char					*ft_jointamere(char *s1, char *s2, int tamere);
+char					*ft_joinfree(char *s1, char *s2, int tamere);
 
 /*
 ** in fill_file.c
