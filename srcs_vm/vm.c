@@ -6,7 +6,7 @@
 /*   By: clanier <clanier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/16 19:56:51 by clanier           #+#    #+#             */
-/*   Updated: 2017/10/23 15:44:29 by hmassonn         ###   ########.fr       */
+/*   Updated: 2017/10/23 15:58:40 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,56 +55,56 @@ int			ft_get_players(char **av, t_cpu **cpu)
 	return (fd ? 1 : ft_bad_usage(cpu, 0));
 }
 
-// void		ft_parse_opt(char **av, int i, int j, char *opt)
-// {
-// 	while (av[i][j])
-// 	{
-// 		if (av[i][j] == 'p')
-// 			*opt |= 0b00000001;
-// 		else if (av[i][j] == 'g')
-// 			*opt |= 0b00000010;
-// 		else if (av[i][j] == 'w')
-// 			*opt |= 0b00000100;
-// 		else if (av[i][j] == 'c')
-// 			*opt |= 0b00001000;
-// 		else if (av[i][j] == 'v')
-// 			*opt |= 0b00010000;
-// 		else if (av[i][j] == 'q')
-// 			*opt |= 0b00100000;
-// 		else if (av[i][j] == 'm')
-// 			*opt |= 0b01000000;
-// 		j++;
-// 	}
-// }
+void		ft_parse_opt(char **av, int i, int j, char *opt)
+{
+	while (av[i][j])
+	{
+		if (av[i][j] == 'p')
+			*opt |= 0b00000001;
+		else if (av[i][j] == 'g')
+			*opt |= 0b00000010;
+		else if (av[i][j] == 'w')
+			*opt |= 0b00000100;
+		else if (av[i][j] == 'c')
+			*opt |= 0b00001000;
+		else if (av[i][j] == 'v')
+			*opt |= 0b00010000;
+		else if (av[i][j] == 'q')
+			*opt |= 0b00100000;
+		else if (av[i][j] == 'm')
+			*opt |= 0b01000000;
+		j++;
+	}
+}
 
-// void		ft_get_opt(char *opt, int *dump, char **av, int ac)
-// {
-// 	int	i;
-// 	int	j;
-//
-// 	i = 1;
-// 	j = 0;
-// 	*opt = 0;
-// 	*dump = -1;
-// 	while (ac > i && av[i][0] == '-' && ft_strcmp("-n", av[i]))
-// 	{
-// 		j = 1;
-// 		if (ac > i + 1 && !ft_strcmp("-dump", av[i]) && ++i)
-// 			*dump = ft_atoi(av[i]);
-// 		else
-// 			ft_parse_opt(av, i, j, opt);
-// 		i++;
-// 	}
-// }
+void		ft_get_opt(char *opt, int *dump, char **av, int ac)
+{
+	int	i;
+	int	j;
+
+	i = 1;
+	j = 0;
+	*opt = 0;
+	*dump = -1;
+	while (ac > i && av[i][0] == '-' && ft_strcmp("-n", av[i]))
+	{
+		j = 1;
+		if (ac > i + 1 && !ft_strcmp("-dump", av[i]) && ++i)
+			*dump = ft_atoi(av[i]);
+		else
+			ft_parse_opt(av, i, j, opt);
+		i++;
+	}
+}
 
 void		ft_vm(char **av)
 {
 	t_cpu	*cpu;
 	t_mars	*mars;
-	// char	opt;
+	char	opt;
 	int		dump = -1;
 
-	// ft_get_opt(&opt, &dump, av, ac);
+	ft_get_opt(&opt, &dump, av, 4);
 	cpu = NULL;
 	if (!ft_get_players(av, &cpu))
 		my_error("probleme de players");

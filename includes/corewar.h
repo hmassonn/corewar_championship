@@ -6,7 +6,7 @@
 /*   By: clanier <clanier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/16 19:56:50 by clanier           #+#    #+#             */
-/*   Updated: 2017/10/23 15:43:56 by hmassonn         ###   ########.fr       */
+/*   Updated: 2017/10/23 15:46:02 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # define NBR_LIVE 21
 # define MAX_CHECKS 10
 # define PROG_NAME_LENGTH (128)
-// # define COMMENT_LENGTH (1024)
+# define TINY_COMMENT_LENGTH (1024)
 # define COREWAR_EXEC_MAGIC 0xea83f3
 
 # define X_MAP 833

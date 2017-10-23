@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_cpu_funcs.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clanier <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: clanier <clanier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/07 12:01:22 by clanier           #+#    #+#             */
-/*   Updated: 2017/03/07 17:03:12 by clanier          ###   ########.fr       */
+/*   Updated: 2017/10/23 15:46:31 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,11 @@ int		ft_get_cpu_info(int fd, t_cpu *cpu)
 	magic <<= 8;
 	magic |= magic_buf[3];
 	ft_bzero(cpu->name, PROG_NAME_LENGTH);
-	ft_bzero(cpu->comment, COMMENT_LENGTH);
+	ft_bzero(cpu->comment, TINY_COMMENT_LENGTH);
 	lseek(fd, 4, SEEK_SET);
 	read(fd, &cpu->name, PROG_NAME_LENGTH - 4);
 	lseek(fd, PROG_NAME_LENGTH, SEEK_SET);
-	read(fd, &cpu->comment, COMMENT_LENGTH - 12);
+	read(fd, &cpu->comment, TINY_COMMENT_LENGTH - 12);
 	cpu->size = ft_get_code_size(fd);
 	if (cpu->size > CHAMP_MAX_SIZE || magic != COREWAR_EXEC_MAGIC)
 		return (0);
