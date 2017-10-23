@@ -6,59 +6,47 @@
 /*   By: hmassonn <hmassonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/20 13:43:50 by hmassonn          #+#    #+#             */
-/*   Updated: 2017/10/20 15:59:23 by hmassonn         ###   ########.fr       */
+/*   Updated: 2017/10/23 08:37:18 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "algen.h"
 
-void 	ft_error(char *str) {
-	ft_putendl(str);
-	exit(-1);
+void	create_champ(int fd)
+{
+	char	zork[] = "l2:\tsti r1,%:live,%1\n\tand r1,%0,r1\n\nlive:\tlive %1\n\tzjmp %:live\n";
+
+	if (write(fd, zork, 63) < 1)
+		ft_error("probleme de write sur le champion body");
 }
 
-void	find_name(char (*new)[19])
+void	assemble(char name[19])
 {
-	if ((*new)[13] >= '9')
-	{
-		(*new)[13] = '0';
-		(*new)[12] += 1;
-	}
-	if ((*new)[12] >= '9')
-	{
-		(*new)[12] = '0';
-		(*new)[11] += 1;
-	}
-	if ((*new)[11] >= '9')
-	{
-		(*new)[11] = '0';
-		(*new)[10] += 1;
-	}
-	if ((*new)[10] >= '9')
-		ft_error("find_name limite supérieur");
-	if ((*new)[15] >= '9')
-	{
-		(*new)[15] = '0';
-		if (((*new)[14] += 1) >= 'z')
-			ft_error("POP_SIZE trop grande (max 240)");
-	}
-	else
-		(*new)[15] += 1;
+	char	**exe;
+
+	if (!(exe = (char**)malloc(sizeof(char*) * 3)))
+		ft_error("malloc");
+	exe[0] = ft_strdup("ressources/asm");
+	exe[1] = ft_strdup(name);
+	exe[2] = NULL;
+	ft_fork("ressources/asm", exe, NULL);
+	ft_deltab(&exe);
 }
 
 void	init(char **av)
 {
 	int		x = 0, fd;
-	// int		size = 0;
-	char	new[19] = "champions/0000a0.s";
+	char	name[19] = "champions/0000a0.s";
 
 	(void)av;
 	while (x < POP_SIZE)
 	{
-		find_name(&new);
-		fd = open(new, O_CREAT | O_RDWR, 0777);
-		// create_champ(fd);
+		find_name(&name);
+		fd = open(name, O_CREAT | O_RDWR, 0777);
+		create_champ_header(fd, name);
+		create_champ(fd);
 		close(fd);
+		assemble(name);
 		x++;
 	}
 }

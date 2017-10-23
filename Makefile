@@ -6,7 +6,7 @@
 #    By: hmassonn <hmassonn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/02 18:56:27 by hmassonn          #+#    #+#              #
-#    Updated: 2017/02/27 16:37:35 by hmassonn         ###   ########.fr        #
+#    Updated: 2017/10/23 08:31:42 by hmassonn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,9 @@ INC_PATH = ./includes/ ./libft/includes
 OBJ_PATH = ./obj/
 LIB_PATH = ./libft/
 SRC_PATH = ./srcs/
-SRC_NAME =	main.c
+SRC_NAME =	main.c	\
+			init.c	\
+			tools.c
 
 OBJ_NAME = $(SRC_NAME:.c=.o)
 
