@@ -6,7 +6,7 @@
 /*   By: hmassonn <hmassonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/20 13:43:50 by hmassonn          #+#    #+#             */
-/*   Updated: 2017/10/23 15:54:27 by hmassonn         ###   ########.fr       */
+/*   Updated: 2017/10/23 21:08:44 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,19 +63,6 @@ void	create_champ(int fd)
 		my_error("probleme de write sur le champion body");
 }
 
-// void	assemble(char name[19])
-// {
-// 	char	**exe;
-//
-// 	if (!(exe = (char**)malloc(sizeof(char*) * 3)))
-// 		my_error("malloc assemble");
-// 	exe[0] = ft_strdup("ressources/asm");
-// 	exe[1] = ft_strdup(name);
-// 	exe[2] = NULL;
-// 	my_fork("ressources/asm", exe, NULL);
-// 	ft_deltab(&exe);
-// }
-
 void	initial(char **av, char ***pool)
 {
 	int		x = 0, fd;
@@ -89,7 +76,6 @@ void	initial(char **av, char ***pool)
 		create_champ_header(fd, name);
 		create_champ(fd);
 		close(fd);
-		// assemble(name);
 		ft_asm(name);
 		(*pool)[x] = ft_strndup(name, 16);
 		x++;
