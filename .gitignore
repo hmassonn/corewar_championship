@@ -2,5 +2,6 @@ libft/*.o
 libft/libc/*.o
 libft/stdio/*.o
 libft/libft.a
-obj/*.o
+obj
 algen
+*.dSYM

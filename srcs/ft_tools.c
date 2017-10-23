@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tools.c                                            :+:      :+:    :+:   */
+/*   ft_tools.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmassonn <hmassonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/20 13:43:50 by hmassonn          #+#    #+#             */
-/*   Updated: 2017/10/23 08:32:28 by hmassonn         ###   ########.fr       */
+/*   Updated: 2017/10/23 13:44:42 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "algen.h"
 
-void 		ft_error(char *str)
+void 		my_error(char *str)
 {
 	ft_putendl(str);
 	ft_putendl(strerror(errno));

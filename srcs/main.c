@@ -6,54 +6,48 @@
 /*   By: hmassonn <hmassonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/20 13:43:50 by hmassonn          #+#    #+#             */
-/*   Updated: 2017/10/23 08:37:18 by hmassonn         ###   ########.fr       */
+/*   Updated: 2017/10/23 13:47:52 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "algen.h"
 
-void	create_champ(int fd)
+void	fight(char **pool)
 {
-	char	zork[] = "l2:\tsti r1,%:live,%1\n\tand r1,%0,r1\n\nlive:\tlive %1\n\tzjmp %:live\n";
+	int		i = 0, j;
+	char	**arg;
 
-	if (write(fd, zork, 63) < 1)
-		ft_error("probleme de write sur le champion body");
-}
-
-void	assemble(char name[19])
-{
-	char	**exe;
-
-	if (!(exe = (char**)malloc(sizeof(char*) * 3)))
-		ft_error("malloc");
-	exe[0] = ft_strdup("ressources/asm");
-	exe[1] = ft_strdup(name);
-	exe[2] = NULL;
-	ft_fork("ressources/asm", exe, NULL);
-	ft_deltab(&exe);
-}
-
-void	init(char **av)
-{
-	int		x = 0, fd;
-	char	name[19] = "champions/0000a0.s";
-
-	(void)av;
-	while (x < POP_SIZE)
+	if (!(arg = (char**)malloc(sizeof(char*) * 4)))
+		my_error("malloc fight");
+	arg[0] = ft_strdup("ressources/corewar");
+	arg[3] = NULL;
+	while (i < POP_SIZE)
 	{
-		find_name(&name);
-		fd = open(name, O_CREAT | O_RDWR, 0777);
-		create_champ_header(fd, name);
-		create_champ(fd);
-		close(fd);
-		assemble(name);
-		x++;
+		arg[1] = ft_strjoin(pool[i], ".cor");
+		j = i + 1;
+		while (j < POP_SIZE)
+		{
+			arg[2] = ft_strjoin(pool[j], ".cor");
+			ft_fork(arg[0], arg, NULL);
+			free(arg[2]);
+			j++;
+		}
+		free(arg[1]);
+		i++;
 	}
+	free(arg[0]);
+	free(arg);
 }
 
 int		main(int ac, char **av)
 {
+	char	**pool;
+
 	(void)ac;
-	init(av);
+	if (!(pool = (char**)malloc(sizeof(char*) * (POP_SIZE + 1))))
+		my_error("malloc main");
+	initial(av, &pool);
+	fight(pool);
+	ft_deltab(&pool);
 	return (0);
 }
