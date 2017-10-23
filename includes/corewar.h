@@ -32,7 +32,6 @@
 # define X_WIN (X_MAP + 300)
 # define Y_WIN Y_MAP
 
-# include "mlx.h"
 # include "libft.h"
 # include <unistd.h>
 # include <fcntl.h>
