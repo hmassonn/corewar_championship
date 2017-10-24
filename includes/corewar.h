@@ -6,7 +6,7 @@
 /*   By: clanier <clanier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/16 19:56:50 by clanier           #+#    #+#             */
-/*   Updated: 2017/10/23 18:46:57 by hmassonn         ###   ########.fr       */
+/*   Updated: 2017/10/24 12:40:22 by hmassonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # define NBR_LIVE 21
 # define MAX_CHECKS 10
 # define PROG_NAME_LENGTH (128)
-# define TINY_COMMENT_LENGTH (1024)
+# define TINY_COMMENT_LENGTH (2048)
 # define COREWAR_EXEC_MAGIC 0xea83f3
 
 # define X_MAP 833
@@ -44,8 +44,8 @@
 
 typedef struct			s_cpu
 {
-	char				name[128];
-	char				comment[1024];
+	char				name[PROG_NAME_LENGTH];
+	char				comment[TINY_COMMENT_LENGTH];
 	unsigned int		reg[REG_NUMBER];
 	int					pc;
 	int					carry;
