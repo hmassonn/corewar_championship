@@ -6,3 +6,4 @@ champions
 obj
 algen
 *.dSYM
+*.DS_Store
