@@ -2,8 +2,8 @@
 .comment "__UNDERSCORE_S__"
 
 first:
-	ld		%0, r2
-	zjmp	%:begin
+	ld		%0, r2				# met r2 a 0
+	zjmp	%:begin				# jump a begin
 	zjmp	%-511
 defdessus:
 	live	%-42
@@ -119,13 +119,13 @@ brain:
 	fork	%:lasertop
 	zjmp	%:atf
 begin:
-	ld		%16777216, r16
-	sti		r16 ,%:first, %6
-	st		r1, 117
-	sti		r1, %:sst, %1
-	ld		%507, r4
-	ld		%507, r6
-	st		r1, 6
+	ld		%16777216, r16			# met 16777216 dans r16
+	sti		r16 ,%:first, %6		# met 4 octet de r16 donc 16777216 au zjmp de first
+	st		r1, 117					# met 4 octets de r1 a l'adresse 117
+	sti		r1, %:sst, %1			# met 4 oct de r1 dans sst live
+	ld		%507, r4				# met 507 dans r4
+	ld		%507, r6				# met 507 dans r6
+	st		r1, 6					# met r1 dans le
 	live	%-42
 def_at:
 	ld		%190055170, r8
