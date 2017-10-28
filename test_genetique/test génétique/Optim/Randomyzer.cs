@@ -22,7 +22,8 @@ namespace test_génétique
 
         public Champion Next_solution(Field field, int Nb_individual)
         {
-            return new Champion(Random_Cara1(field), Random_Cara2(field), new ID (0,Nb_individual++,0));
+            return null;
+            //return new Champion(Random_Cara1(field), Random_Cara2(field), new ID (0,Nb_individual++,0));
         }
 
 

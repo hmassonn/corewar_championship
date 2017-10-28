@@ -90,7 +90,7 @@ namespace test_génétique
             Random random = new Random(); // May be a mistake with random set this way, have a check on it!
             int nb_individual = 0;
 
-
+            /*
             for (int i = 0; i <= number_to_hybrid; i++)
             {
                 Champion parent1 = Lucky_Wheel(Population);
@@ -117,7 +117,7 @@ namespace test_génétique
             }
             foreach (Champion S in Kids)
                 Population.Add(S);
-
+*/
             return Population;
         }
 
@@ -125,9 +125,10 @@ namespace test_génétique
         {
             int number_to_mutate = (int)Math.Round(Population.Count * mutation_rate);
             List<Champion> Population_after_Mutation = new List<Champion>(Population);
-
+            /*
             for (int i = 0; i < number_to_mutate; i++)
             {
+
                 Champion Mutant;
                 double cara1;
                 double cara2;
@@ -150,6 +151,7 @@ namespace test_génétique
                 Population_after_Mutation.Remove(Population_after_Mutation[draw]);
                 Population_after_Mutation.Add(Mutant);
             }
+            */
             return Population_after_Mutation;
         }
 

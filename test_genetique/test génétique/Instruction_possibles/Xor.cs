@@ -9,9 +9,10 @@ namespace test_génétique.Instruction_possibles
 {
     class Xor : Instruction
     {
-        public Xor() : base ()
+        public const string RED_CODE = "xor";
+
+        public Xor(List<Parameter> parameters) : base(parameters)
         {
-            red_code = "xor";
         }
     }
 }
