@@ -11,7 +11,7 @@ namespace test_génétique.Instruction_possibles
     {
         public const string RED_CODE = "sti";
 
-        public Sti(List<Parameter> parameters) : base(parameters)
+        public Sti(List<Parameter> parameters = null) : base(parameters)
         {
 
         }

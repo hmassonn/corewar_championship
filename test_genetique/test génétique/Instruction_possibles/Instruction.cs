@@ -19,7 +19,7 @@ namespace test_génétique
 
         public const string RED_CODE = "default";
 
-        public Instruction (List<Parameter> parameters)
+        public Instruction (List<Parameter> parameters = null)
         {
             this.parameters = parameters;
         }

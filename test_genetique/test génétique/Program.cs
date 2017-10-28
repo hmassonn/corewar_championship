@@ -85,7 +85,76 @@ namespace test_génétique
                     parameter.value = parameter_value;
                     listParameters.Add(parameter);
                 }
-                listInstructions.Add(new Instruction(listParameters));
+
+                // Define Instruction type
+                Instruction instruction;
+                switch(str_instruction)
+                {
+                  case "add":
+                      instruction = new Add_();
+                      break;
+
+                  case "and":
+                      instruction = new And_();
+                      break;
+
+                  case "fork":
+                      instruction = new Fork();
+                      break;
+
+                  case "ld":
+                      instruction = new Ld();
+                      break;
+
+                  case "ldi":
+                      instruction = new Ldi();
+                      break;
+
+                  case "lfork":
+                      instruction = new Lfork();
+                      break;
+
+                  case "live":
+                      instruction = new Live();
+                      break;
+
+                  case "lld":
+                      instruction = new Lld();
+                      break;
+
+                  case "lldi":
+                      instruction = new Lldi();
+                      break;
+
+                  case "or":
+                      instruction = new Or_();
+                      break;
+
+                  case "st":
+                      instruction = new St();
+                      break;
+
+                  case "sti":
+                      instruction = new Sti();
+                      break;
+
+                  case "sub":
+                      instruction = new Sub();
+                      break;
+
+                  case "xor":
+                      instruction = new Xor();
+                      break;
+
+                  case "zjmp":
+                      instruction = new Zjmp();
+                      break;
+
+                  default:
+                      instruction = new Instruction();
+                }
+                instruction.listParameters = listParameters;
+                listInstructions.Add(instruction);
                 width++;
             }
 

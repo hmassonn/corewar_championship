@@ -11,7 +11,7 @@ namespace test_génétique.Instruction_possibles
     {
         public const string RED_CODE = "lldi";
 
-        public Lldi_(List<Parameter> parameters) : base(parameters)
+        public Lldi_(List<Parameter> parameters = null) : base(parameters)
         {
 
         }

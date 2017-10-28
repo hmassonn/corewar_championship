@@ -11,10 +11,10 @@ namespace test_génétique.Instruction_possibles
     {
         public const string RED_CODE = "zjmp";
 
-        public Zjmp(List<Parameter> parameters) : base(parameters)
+        public Zjmp(List<Parameter> parameters = null) : base(parameters)
         {
            // para_possible.Add(new Direct());
-            
+
         }
     }
 }

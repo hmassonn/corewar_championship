@@ -11,7 +11,7 @@ namespace test_génétique.Instruction_possibles
     {
         public const string RED_CODE = "xor";
 
-        public Xor(List<Parameter> parameters) : base(parameters)
+        public Xor(List<Parameter> parameters = null) : base(parameters)
         {
         }
     }
