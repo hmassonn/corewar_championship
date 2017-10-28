@@ -19,8 +19,8 @@ namespace test_génétique
         public int Generation_max { get; private set; }
         public int Generation_nb { get; private set; }
 
-        public List<Solution> Population { get; private set; }
-        public List<Solution> Bests_solution { get; private set; }
+        public List<Champion> Population { get; private set; }
+        public List<Champion> Bests_solution { get; private set; }
 
 
         /// <summary>
@@ -46,17 +46,17 @@ namespace test_génétique
             Hybridation_rate = hyb_rate;
             Mutation_rate = mut_rate;
 
-            Bests_solution = new List<Solution>();
-            Population = new List<Solution>();
+            Bests_solution = new List<Champion>();
+            Population = new List<Champion>();
 
             Generation_nb = 0;
         }
 
-        public Solution Run_genetics()
+        public Champion Run_genetics()
         {
-            List<Solution> Elits = new List<Solution>();
-            List<Solution> Population_after_Hybridation = new List<Solution>();
-            List<Solution> Population_after_Mutation = new List<Solution>();
+            List<Champion> Elits = new List<Champion>();
+            List<Champion> Population_after_Hybridation = new List<Champion>();
+            List<Champion> Population_after_Mutation = new List<Champion>();
 
             Facto.Generate_solutions(Begin_pop, Range);
 
@@ -72,19 +72,19 @@ namespace test_génétique
                 // Selection (Elitism)
                 //----------------------------------------------------------------------------------------
                 Elits = Evolution.Elitism(Population, Selection_rate);
-                Population = new List<Solution>(Elits);
+                Population = new List<Champion>(Elits);
                 Elits.Clear();
 
                 // Hybridation
                 //---------------------------------------------------------------------------------------- 
                 Population_after_Hybridation = Evolution.Hybridation(Population, Hybridation_rate, Generation_nb++);
-                Population = new List<Solution>(Population_after_Hybridation);
+                Population = new List<Champion>(Population_after_Hybridation);
                 Population_after_Hybridation.Clear();
 
                 // Mutation
                 //----------------------------------------------------------------------------------------
                 Population_after_Mutation = Evolution.Mutation(Randomyse, Population, Range, Mutation_rate, Generation_nb);
-                Population = new List<Solution>(Population_after_Hybridation);
+                Population = new List<Champion>(Population_after_Hybridation);
                 Population_after_Mutation.Clear();
             }
 

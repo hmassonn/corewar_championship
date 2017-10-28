@@ -19,7 +19,7 @@ namespace test_génétique
 
         public void Generate_solutions(int count, Field field)
         {
-            List<Solution> new_population = new List<Solution>();
+            List<Champion> new_population = new List<Champion>();
 
             for (int i = 0; i < count; i++)
                 new_population.Add(Randomyse.Next_solution(field, i));

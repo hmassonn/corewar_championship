@@ -13,7 +13,7 @@ namespace test_génétique
             // rates are to be optimyze latter on
             double selection_rate = 0.5;
             double hybridation_rate = 2;
-            double mutation_rate = 0.1;
+            double mutation_rate = 0.01;
 
             int begining_pop = 100;
             int nb_generation = 300;
@@ -24,7 +24,7 @@ namespace test_génétique
             Factory facto = new Factory(randomyse);
             Genetics Darwin = new Genetics(randomyse, facto, range, nb_generation, begining_pop, hybridation_rate, mutation_rate, selection_rate);
 
-            Solution Champ = Darwin.Run_genetics();
+            Champion Champ = Darwin.Run_genetics();
         }
     }
 }

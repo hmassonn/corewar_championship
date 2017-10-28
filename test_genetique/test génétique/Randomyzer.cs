@@ -23,9 +23,9 @@ namespace test_génétique
             this.Bornes = bornes;
         }
 
-        public Solution Next_solution(Field field, int Nb_individual)
+        public Champion Next_solution(Field field, int Nb_individual)
         {
-            return new Solution(Random_Cara1(field), Random_Cara2(field), new ID (0,Nb_individual++,0));
+            return new Champion(Random_Cara1(field), Random_Cara2(field), new ID (0,Nb_individual++,0));
         }
 
 

@@ -8,23 +8,23 @@ namespace test_génétique
 {
     public static class Evolution
     {
-        public static List<Solution> Elitism(List<Solution> Population, double Selection_rate)
+        public static List<Champion> Elitism(List<Champion> Population, double Selection_rate)
         {
             int number_to_select = (int)Math.Round(Population.Count * Selection_rate);
-            List<Solution> Population_after_selection = new List<Solution>();
+            List<Champion> Population_after_selection = new List<Champion>();
 
             for (int i = 0; i < number_to_select; i++)
             {
                 Population_after_selection.Add(Population[i]);
             }
 
-            Population = new List<Solution>(Population_after_selection);
+            Population = new List<Champion>(Population_after_selection);
             Population_after_selection.Clear();
 
             return Population_after_selection;
         }
 
-        public static Solution Lucky_Wheel(List<Solution> Candidates)
+        public static Champion Lucky_Wheel(List<Champion> Candidates)
         {
             // To creat a lucky wheel, porprieties of Geometric sequence are used.
 
@@ -39,7 +39,7 @@ namespace test_génétique
             List<double> part_wheel = new List<double>(); // Stacking all part of the wheel ( section of he wheel in °).
             List<double> position_wheel = new List<double>(); // tacking alls the potition on the wheel (position in °, the first is 0° the last is 360°).
 
-            Solution winner = null; // intialising the object solution.
+            Champion winner = null; // intialising the object solution.
 
             //Building the Geometric sequence (depending of the size of the population).
             sequence_terms.Add(n0);
@@ -83,9 +83,9 @@ namespace test_génétique
             return winner;
         }
 
-        public static List<Solution> Hybridation(List<Solution> Population, double hybridation_rate, int generation)
+        public static List<Champion> Hybridation(List<Champion> Population, double hybridation_rate, int generation)
         {
-            List<Solution> Kids = new List<Solution>();
+            List<Champion> Kids = new List<Champion>();
             int number_to_hybrid = (int)Math.Round(Population.Count * hybridation_rate);
             Random random = new Random(); // May be a mistake with random set this way, have a check on it!
             int nb_individual = 0;
@@ -93,8 +93,8 @@ namespace test_génétique
 
             for (int i = 0; i <= number_to_hybrid; i++)
             {
-                Solution parent1 = Lucky_Wheel(Population);
-                Solution parent2 = Lucky_Wheel(Population);
+                Champion parent1 = Lucky_Wheel(Population);
+                Champion parent2 = Lucky_Wheel(Population);
 
                 while (parent1.Id == parent2.Id)
                     parent2 = Lucky_Wheel(Population);
@@ -113,31 +113,31 @@ namespace test_génétique
                     cara2 = parent1.Y;
                 else
                     cara2 = parent2.Y;
-                Kids.Add(new Solution(cara1, cara2, new ID(generation, nb_individual++, 0)));
+                Kids.Add(new Champion(cara1, cara2, new ID(generation, nb_individual++, 0)));
             }
-            foreach (Solution S in Kids)
+            foreach (Champion S in Kids)
                 Population.Add(S);
 
             return Population;
         }
 
-        public static List<Solution> Mutation(Randomyzer randomyse, List<Solution> Population,Field field, double mutation_rate, int generation)
+        public static List<Champion> Mutation(Randomyzer randomyse, List<Champion> Population,Field field, double mutation_rate, int generation)
         {
             int number_to_mutate = (int)Math.Round(Population.Count * mutation_rate);
-            List<Solution> Population_after_Mutation = new List<Solution>(Population);
+            List<Champion> Population_after_Mutation = new List<Champion>(Population);
 
             for (int i = 0; i < number_to_mutate; i++)
             {
-                Solution Mutant;
+                Champion Mutant;
                 double cara1;
                 double cara2;
 
                 Random rdm = new Random();
-                int draw = rdm.Next(1, Population.Count - 1); // to avoid to pick the best Solution
+                int draw = rdm.Next(2, Population.Count - 1); // to avoid to pick the best Champion
 
 
-                int coin1 = rdm.Next(0, 1);
-                int coin2 = rdm.Next(0, 1);
+                int coin1 = rdm.Next(0, 10);
+                int coin2 = rdm.Next(0, 10);
 
                 cara1 = Population[draw].X;
                 if (coin1 == 1)
@@ -145,12 +145,26 @@ namespace test_génétique
                 cara2 = Population[draw].Y;
                 if (coin2 == 1)
                     cara2 = randomyse.Random_Cara2(field);
-                Mutant = new Solution(cara1, cara2, new ID(Population[draw].Id.Nb_gen, Population[draw].Id.Nb_gen, Population[draw].Id.Nb_mut+1));
+                Mutant = new Champion(cara1, cara2, new ID(Population[draw].Id.Nb_gen, Population[draw].Id.Nb_gen, Population[draw].Id.Nb_mut+1));
                 Population.Remove(Population[draw]);
                 Population_after_Mutation.Remove(Population_after_Mutation[draw]);
                 Population_after_Mutation.Add(Mutant);
             }
             return Population_after_Mutation;
         }
+
+        public static Champion Reverse_Lucky_Wheel ()
+        {
+
+
+            // TODO couper la lucky wheel en 2 partis: la partie comune lié a la suite géométrique et la partie inversser entre l'hybridation et la mitation
+
+        
+
+        }
+
+
+        
+
     }
 }
