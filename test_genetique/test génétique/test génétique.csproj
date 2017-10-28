@@ -47,6 +47,16 @@
     <Compile Include="Field.cs" />
     <Compile Include="Génétics.cs" />
     <Compile Include="ID.cs" />
+    <Compile Include="Instruction\Adi.cs" />
+    <Compile Include="Instruction\Instruction.cs" />
+    <Compile Include="Instruction\Ld.cs" />
+    <Compile Include="Instruction\Live.cs" />
+    <Compile Include="Instruction\St.cs" />
+    <Compile Include="Instruction\Sub.cs" />
+    <Compile Include="Parameters\Direct.cs" />
+    <Compile Include="Parameters\Indirect.cs" />
+    <Compile Include="Parameters\Param.cs" />
+    <Compile Include="Parameters\Registre.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Randomyzer.cs" />

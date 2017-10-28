@@ -8,13 +8,13 @@ namespace test_génétique
 {
     public class Field
     {
-        public List<string> Instruction { get; private set; }
+        public List<Instruction> Instruction { get; private set; }
         public List<string> Parameters { get; private set; }
 
         public int Min { get; private set; }
         public int Max { get; private set; }
 
-        public Field (List<string> instruction, List<string> parameters, int min, int max)
+        public Field (List<Instruction> instruction, List<string> parameters, int min, int max)
         {
             this.Instruction = instruction;
             this.Parameters = parameters;
@@ -30,7 +30,7 @@ namespace test_génétique
 
         public void fill_instruction()
         {
-            Instruction.Add("waiting'");
+         
 
             
         }
