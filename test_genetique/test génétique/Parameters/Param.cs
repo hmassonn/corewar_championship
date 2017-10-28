@@ -11,11 +11,11 @@ namespace test_génétique.Parameters
     {
         public int weight_P { get; private set; }
         public string type_P { get; private set; }
-        public Instruction Owner_instru { get; private set; }
+      
 
-        public Param (Instruction owner_instru)
+        public Param ()
         {
-            this.Owner_instru = owner_instru;
+            
 
         }
 

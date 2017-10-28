@@ -11,7 +11,7 @@ namespace test_génétique.Instruction_possibles
     {
         public Ld() : base ()
         {
-           // this.para.Add(new Direct(4));
+           
 
         }
     }

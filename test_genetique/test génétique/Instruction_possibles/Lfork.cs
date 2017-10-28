@@ -7,13 +7,11 @@ using test_génétique.Parameters;
 
 namespace test_génétique.Instruction_possibles
 {
-    class St : Instruction
+    class Lfork_ : Instruction
     {
-
-        public St() : base ()
+        public Lfork_() : base ()
         {
-           
-
+          
         }
     }
 }

@@ -7,11 +7,11 @@ using test_génétique.Parameters;
 
 namespace test_génétique.Instruction_possibles
 {
-    class Adi : Instruction
+    class Zjmp : Instruction
     {
-        public Adi() : base ()
+        public Zjmp() : base ()
         {
-            // this.para.Add(new Direct(4));
+     
 
         }
     }

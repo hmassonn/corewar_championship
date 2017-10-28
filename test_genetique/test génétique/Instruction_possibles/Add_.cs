@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using test_génétique.Parameters;
 
-
-namespace test_génétique.Parameters
+namespace test_génétique.Instruction_possibles
 {
-    public class Registre : Param
+    class Add_ : Instruction
     {
-        public Registre ()
+        public Add_() : base ()
         {
+           
 
         }
     }
