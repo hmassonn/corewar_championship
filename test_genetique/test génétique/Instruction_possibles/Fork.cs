@@ -12,6 +12,7 @@ namespace test_génétique.Instruction_possibles
         public Fork_() : base()
         {
             red_code = "fork";
+            para_possible.Add(new Direct ());
         }
     }
 }

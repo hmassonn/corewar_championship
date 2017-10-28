@@ -12,6 +12,10 @@ namespace test_génétique.Instruction_possibles
         public Add_() : base ()
         {
             red_code = "add";
+            para_possible.Add(new Registre());
+            para_possible.Add(new Registre());
+            para_possible.Add(new Registre());
+
         }
     }
 }

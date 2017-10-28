@@ -12,6 +12,7 @@ namespace test_génétique.Instruction_possibles
         public Live () : base ()
         {
             red_code = "live";
+            para_possible.Add(new Direct());
         }
 
     }

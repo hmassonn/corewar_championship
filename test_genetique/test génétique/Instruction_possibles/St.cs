@@ -13,6 +13,9 @@ namespace test_génétique.Instruction_possibles
         public St() : base ()
         {
             red_code = "st";
+            para_possible.Add(new Registre());
+            para_possible.Add(new Indirect());
+            para_possible.Add(new Registre());
 
         }
     }

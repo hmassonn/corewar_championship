@@ -12,6 +12,9 @@ namespace test_génétique.Instruction_possibles
         public Zjmp() : base ()
         {
             red_code = "zjmp";
+            para_possible.Add(new Direct());
+            
+
 
         }
     }
