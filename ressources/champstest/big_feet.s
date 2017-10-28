@@ -37,7 +37,7 @@ fork	%:begin
 
 piege1:							# while(1)
 live	%118978653103279		# je suis en vie
-sti		r2, %:start, r5 
+sti		r2, %:start, r5
 sti		r3, %:start, r4
 sti		r10, %:start, r6
 sub		r5, r16, r5
@@ -65,7 +65,7 @@ zjmp	%:begin
 
 piege2:
 live	%198562346853412
-sti		r2, %:end, r7 
+sti		r2, %:end, r7
 sti		r3, %:end, r9
 sti		r10, %:end, r11
 add		r7, r16, r7
@@ -75,5 +75,4 @@ sub		r12, r13, r12			# decrementation du compteur
 zjmp	%:start_piege			# reviens en debut de boucle
 ld		%0, r8					# carry = 1
 zjmp	%:piege2				# reviens en debut de boucle
-
 end:
