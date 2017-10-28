@@ -4,6 +4,7 @@ namespace test_génétique
 { 
     public class Champion : IComparable
     {
+        // Hugo est un gros lard
         public double X { get; private set; }
         public double Y { get; private set; }//C'est deux la sont temporaire, c'est la que ton taf commence. Sur ce bloc il faut que tu me mette tt les variable de ton probléme d'optimisation
         //Tu peut pt méttre tes instruction en string ( juste un ID, si tu a mieux ... ben c'est mieux ^^)
