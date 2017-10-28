@@ -11,7 +11,7 @@ namespace test_génétique.Instruction_possibles
     {
         public const string RED_CODE = "ld";
 
-        public Ld(List<Parameter> parameters) : base (parameters)
+        public Ld(List<Parameter> parameters = null) : base (parameters)
         {
             /*
             if (entre[0][0] == "dir")

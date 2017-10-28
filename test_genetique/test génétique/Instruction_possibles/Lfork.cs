@@ -11,7 +11,7 @@ namespace test_génétique.Instruction_possibles
     {
         public const string RED_CODE = "lfork";
 
-        public Lfork_(List<Parameter> parameters) : base (parameters)
+        public Lfork_(List<Parameter> parameters = null) : base (parameters)
         {
            // para_possible.Add(new Direct ());
         }
