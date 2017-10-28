@@ -5,13 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using test_génétique.Parameters;
 
-namespace test_génétique.Instruction
+namespace test_génétique.Instruction_possibles
 {
-    class Ld : Instruction
+    class St : Instruction
     {
-        public Ld() : base ()
+
+        public St() : base ()
         {
-           // this.para.Add(new Direct(4));
+            // this.para.Add(new Direct(4));
 
         }
     }

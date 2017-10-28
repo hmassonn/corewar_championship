@@ -5,12 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using test_génétique.Parameters;
 
-namespace test_génétique.Instruction
+namespace test_génétique.Instruction_possibles
 {
-    class St : Instruction
+    class Adi : Instruction
     {
-
-        public St() : base ()
+        public Adi() : base ()
         {
             // this.para.Add(new Direct(4));
 
