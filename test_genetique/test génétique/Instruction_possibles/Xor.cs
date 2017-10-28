@@ -11,7 +11,7 @@ namespace test_génétique.Instruction_possibles
     {
         public Xor() : base ()
         {
-        
+            red_code = "xor";
         }
     }
 }

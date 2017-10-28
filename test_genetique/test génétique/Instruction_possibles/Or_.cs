@@ -11,7 +11,7 @@ namespace test_génétique.Instruction_possibles
     {
         public Or_() : base ()
         {
-         
+            red_code = "or";
 
         }
     }

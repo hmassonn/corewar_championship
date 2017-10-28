@@ -12,7 +12,7 @@ namespace test_génétique.Instruction_possibles
 
         public St() : base ()
         {
-           
+            red_code = "st";
 
         }
     }

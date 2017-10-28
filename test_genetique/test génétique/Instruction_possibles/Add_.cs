@@ -11,8 +11,7 @@ namespace test_génétique.Instruction_possibles
     {
         public Add_() : base ()
         {
-           
-
+            red_code = "add";
         }
     }
 }

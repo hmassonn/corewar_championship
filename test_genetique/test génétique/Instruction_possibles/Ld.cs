@@ -9,9 +9,10 @@ namespace test_génétique.Instruction_possibles
 {
     class Ld : Instruction
     {
+
         public Ld() : base ()
         {
-           
+            red_code = "ld";
 
         }
     }

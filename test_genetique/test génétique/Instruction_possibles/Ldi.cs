@@ -11,8 +11,7 @@ namespace test_génétique.Instruction_possibles
     {
         public Ldi() : base ()
         {
-           
-
+            red_code = "ldi";
         }
     }
 }

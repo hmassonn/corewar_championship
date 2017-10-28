@@ -11,8 +11,7 @@ namespace test_génétique.Instruction_possibles
     {
         public Lld_() : base ()
         {
-      
-
+            red_code = "lld";
         }
     }
 }

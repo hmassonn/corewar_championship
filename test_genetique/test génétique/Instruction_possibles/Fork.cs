@@ -9,10 +9,9 @@ namespace test_génétique.Instruction_possibles
 {
     class Fork_ : Instruction
     {
-        public Fork_() : base ()
+        public Fork_() : base()
         {
-          
-
+            red_code = "fork";
         }
     }
 }

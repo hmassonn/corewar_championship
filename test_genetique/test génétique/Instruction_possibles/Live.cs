@@ -9,11 +9,9 @@ namespace test_génétique.Instruction_possibles
 {
     class Live : Instruction
     {
-
         public Live () : base ()
         {
-           
-
+            red_code = "live";
         }
 
     }
