@@ -9,22 +9,19 @@ namespace test_génétique
    public class Factory
     {
         public Randomyzer Randomyse { get; private set; }
-
+        public List<Champion> random_pop;
     
         public Factory(Randomyzer randomyse)
         {
             this.Randomyse = randomyse;
+            random_pop = new List<Champion>();
         }
 
 
         public void Generate_solutions(int count, Field field)
         {
-            List<Champion> new_population = new List<Champion>();
-
             for (int i = 0; i < count; i++)
-                new_population.Add(Randomyse.Next_solution(field, i));
-
-
+                random_pop.Add(Randomyse.Next_solution(field, i));
         }
 
 

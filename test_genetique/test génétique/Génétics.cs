@@ -59,6 +59,7 @@ namespace test_génétique
             List<Champion> Population_after_Mutation = new List<Champion>();
 
             Facto.Generate_solutions(Begin_pop, Range);
+            Population = Facto.random_pop;
 
             // Begining of iterations
             //----------------------------------------------------------------------------------------

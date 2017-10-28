@@ -11,15 +11,12 @@ namespace test_génétique
         private Random rdm = new Random(); // Making the random object global because we used to create many randoms quickly.
                                            // This causes random seeds to be the same, so randoms objects gave the same values.
                                            // Making one global random instance avoids this problem.
-
       
         public Field Bornes { get; private set; }
 
-      
 
         public Randomyzer( Field bornes)
         {
-           
             this.Bornes = bornes;
         }
 
