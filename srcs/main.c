@@ -14,7 +14,6 @@
 #include "op.h"
 #include "corewar.h"
 
-
 void	fight(char **pool)
 {
 	int		i = 0, j;
@@ -32,6 +31,7 @@ void	fight(char **pool)
 		while (j < POP_SIZE)
 		{
 			arg[3] = ft_strjoin(pool[j], ".cor");
+			ft_putstr("vm\n");
 			ft_vm(arg);
 			free(arg[3]);
 			j++;
@@ -52,6 +52,7 @@ int		main(int ac, char **av)
 	if (!(pool = (char**)malloc(sizeof(char*) * (POP_SIZE + 1))))
 		my_error("malloc main");
 	initial(av, &pool);
+	ft_arrprint(pool);
 	fight(pool);
 	ft_deltab(&pool);
 	return (0);

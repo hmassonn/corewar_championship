@@ -17,20 +17,30 @@
 # include <unistd.h>
 # include <fcntl.h>
 # include <errno.h>
+# include <dirent.h>
+# include <time.h>
+# include <grp.h>
+# include <pwd.h>
+# include <stdio.h>
+# include <sys/stat.h>
+# include <sys/xattr.h>
+# include <sys/types.h>
+# include <uuid/uuid.h>
 # include "libft.h"
 
 #define POP_SIZE	100
 #define N_KIN		10
 #define N_CHILD		10
 #define N_TARGET	1
+#define PATH_CHAMPIONSHIP "champions/"
+// #define MV_ALL_FILE		for f in *.cor.dmp; do mv "$f" "`echo $f | sed s/.cor.dmp/.s/`"; done
 
 /*
 **		dans initial.c
 */
 
-void	find_name(char (*name)[19]);
-void	create_champ_header(int fd, char name[19]);
-void	create_champ(int fd);
+// void	create_champ_header(int fd, char name[19]);
+// void	create_champ(int fd);
 void	assemble(char name[19]);
 void	initial(char **av, char ***pool);
 

@@ -102,17 +102,26 @@ void		ft_vm(char **av)
 	t_cpu	*cpu;
 	t_mars	*mars;
 	char	opt;
-	int		dump = -1;
+	int		dump = -1, i = 0;
+	time_t		begintime;
+	struct tm	*timeinfobegin;
 
+	time(&begintime);
+	timeinfobegin = localtime(&begintime);
+	while (av[i])
+		printf("%s\n", av[i++]);
 	ft_get_opt(&opt, &dump, av, 4);
 	opt = 0b00100000;
 	cpu = NULL;
+	ft_putstr("imp\n");
 	if (!ft_get_players(av, &cpu))
 		my_error("probleme de players");
 	mars = ft_new_mars(&cpu, opt, dump);
 	// if (opt & 0b00000100)
 	// 	ft_ncurses_init();
-	ft_run_mars(mars, cpu);
+	ft_putstr("lol\n");
+	ft_run_mars(mars, cpu, timeinfobegin);
+	ft_putstr("end\n");
 	// if (opt & 0b00000100)
 	// {
 	// 	getch();

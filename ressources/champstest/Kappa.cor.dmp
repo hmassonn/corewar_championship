@@ -1,6 +1,0 @@
-.name "Kappa"
-.comment "AKA Kappa Sandwich."
-
-	sti r1, %456, %1
-	ld %75, r13
-	lld , , 

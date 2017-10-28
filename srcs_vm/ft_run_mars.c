@@ -123,15 +123,35 @@ int		ft_kill_cpu(t_mars **mars, t_cpu **cpu)
 	return (nlive);
 }
 
-void	ft_run_mars(t_mars *mars, t_cpu *cpu)
+void	ft_run_mars(t_mars *mars, t_cpu *cpu, struct tm *timeinfobegin)
 {
-	char	dump;
+	char		dump;
+	time_t		nowtime;
+	struct tm	*timeinfonow;
 
 	dump = 0;
 	if ((mars->opt & 0b01000010) == 0b01000010)
 		ft_music_load(&mars, cpu);
 	while (42)
 	{
+		if (mars->cycle % 1000 == 0)
+		{
+			time(&nowtime);
+			timeinfonow = localtime(&nowtime);
+			ft_putnbr(timeinfonow->tm_sec);
+			ft_putchar('\t');
+			ft_putstr("timeinfobegin->tm_sec: ");
+			ft_putnbr(timeinfobegin->tm_sec + 2);
+			ft_putchar('\n');
+			ft_putstr("timeinfonow->tm_sec: ");
+			ft_putnbr(timeinfonow->tm_sec);
+			ft_putchar('\n');
+			if (timeinfonow->tm_sec >= timeinfobegin->tm_sec + 2)
+			{
+				ft_putstr("lolghsfdqsfqgqsf\n");
+				return ;
+			}
+		}
 		if (mars->dump == mars->cycle && (dump = 1))
 			break ;
 		if (mars->opt & 0b00000111 && mars->modif

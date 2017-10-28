@@ -97,8 +97,6 @@ all: $(NAME)
 $(NAME): $(OBJ_LO) $(OBJ_ASM) $(OBJ_VM)
 	@echo "\033[34m[  LIBRAIRIES  ]\033[0m"
 	@make -C $(LIB_PATH)
-	mkdir champions
-	chmod 777 champions
 	@echo "\033[34m[ MAIN PROJECT ]\033[0m"
 	@echo "\033[32m[$(NAME)]\t\t(release)\033[0m"
 	$(CC) $(CFLAGS) -o $(NAME) $(INC) $^ $(LIB_FILE)
