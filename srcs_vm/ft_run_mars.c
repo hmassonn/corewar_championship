@@ -123,7 +123,7 @@ int		ft_kill_cpu(t_mars **mars, t_cpu **cpu)
 	return (nlive);
 }
 
-void	ft_run_mars(t_mars *mars, t_cpu *cpu, struct tm *timeinfobegin)
+void	ft_run_mars(t_mars *mars, t_cpu *cpu, int timeinfobegin)
 {
 	char		dump;
 	time_t		nowtime;
@@ -138,19 +138,15 @@ void	ft_run_mars(t_mars *mars, t_cpu *cpu, struct tm *timeinfobegin)
 		{
 			time(&nowtime);
 			timeinfonow = localtime(&nowtime);
-			ft_putnbr(timeinfonow->tm_sec);
-			ft_putchar('\t');
-			ft_putstr("timeinfobegin->tm_sec: ");
-			ft_putnbr(timeinfobegin->tm_sec + 2);
-			ft_putchar('\n');
-			ft_putstr("timeinfonow->tm_sec: ");
-			ft_putnbr(timeinfonow->tm_sec);
-			ft_putchar('\n');
-			if (timeinfonow->tm_sec >= timeinfobegin->tm_sec + 2)
-			{
-				ft_putstr("lolghsfdqsfqgqsf\n");
+			if (timeinfonow->tm_sec >= timeinfobegin + 2 || (timeinfobegin == 58 && timeinfonow->tm_sec >= 0) || (timeinfobegin == 59 && timeinfonow->tm_sec >= 1))
 				return ;
-			}
+		}
+		if ((timeinfonow->tm_sec >= timeinfobegin + 1 || (timeinfobegin == 59 && timeinfonow->tm_sec >= 0) || (timeinfobegin == 58 && timeinfonow->tm_sec == 59) || (timeinfobegin == 58 && timeinfonow->tm_sec >= 0)) && mars->cycle % 100 == 0)
+		{
+			time(&nowtime);
+			timeinfonow = localtime(&nowtime);
+			if (timeinfonow->tm_sec >= timeinfobegin + 2 || (timeinfobegin == 58 && timeinfonow->tm_sec >= 0) || (timeinfobegin == 59 && timeinfonow->tm_sec >= 1))
+				return ;
 		}
 		if (mars->dump == mars->cycle && (dump = 1))
 			break ;

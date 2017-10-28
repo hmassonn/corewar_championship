@@ -28,7 +28,7 @@
 # include <uuid/uuid.h>
 # include "libft.h"
 
-#define POP_SIZE	100
+#define POP_SIZE	42
 #define N_KIN		10
 #define N_CHILD		10
 #define N_TARGET	1

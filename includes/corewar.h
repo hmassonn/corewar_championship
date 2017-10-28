@@ -166,7 +166,7 @@ t_cpu					*ft_get_cycle_wait(t_cpu *cpu, unsigned char opcode);
 t_cpu					*ft_get_opcode(t_mars **mars, t_cpu *cpu, int opcode);
 void					ft_run_cpu(t_mars **mars, t_cpu **cpu);
 int						ft_kill_cpu(t_mars **mars, t_cpu **cpu);
-void					ft_run_mars(t_mars *mars, t_cpu *cpu, struct tm *timeinfobegin);
+void					ft_run_mars(t_mars *mars, t_cpu *cpu, int timeinfobegin);
 void					ft_draw_case_line(t_mars *mars, int x1, int x2, int y);
 void					ft_draw_skull_1(t_mars *mars);
 void					ft_draw_skull_2(t_mars *mars);

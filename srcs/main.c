@@ -31,7 +31,6 @@ void	fight(char **pool)
 		while (j < POP_SIZE)
 		{
 			arg[3] = ft_strjoin(pool[j], ".cor");
-			ft_putstr("vm\n");
 			ft_vm(arg);
 			free(arg[3]);
 			j++;
@@ -47,10 +46,13 @@ void	fight(char **pool)
 int		main(int ac, char **av)
 {
 	char	**pool;
+	int		i = 0;
 
 	(void)ac;
 	if (!(pool = (char**)malloc(sizeof(char*) * (POP_SIZE + 1))))
 		my_error("malloc main");
+	while (i < POP_SIZE)
+		pool[i++] = NULL;
 	initial(av, &pool);
 	ft_arrprint(pool);
 	fight(pool);
