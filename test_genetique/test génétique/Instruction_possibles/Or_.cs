@@ -9,7 +9,7 @@ namespace test_génétique.Instruction_possibles
 {
     class Or_ : Instruction
     {
-        public Or_() : base ()
+        public Or_(List<Parameter> parameters) : base(parameters)
         {
             red_code = "or";
 

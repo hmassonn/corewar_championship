@@ -5,21 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 using test_génétique.Parameters;
 
-namespace test_génétique.Instruction_possibles
+namespace test_génétique
 {
     public class Instruction
     {
         public string type_I { get; private set; }
-        public List <Param> para_possible { get; protected set; }
+        public List <Parameter> para_possible { get; protected set; }
         public int weight_I { get; private set; }
         public string red_code { get; protected set; }
-        public List<Data> data { get; protected set; }
+        public List<Parameter> parameters { get; protected set; }
 
 
-        public Instruction ()
+        public Instruction (List<Parameter> parameters)
         {
-            this.para_possible = new List<Param>();
-
+            this.parameters = parameters;
         }
 
 

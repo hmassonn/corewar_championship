@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace test_génétique.Parameters
 {
-   public class Indirect : Param
+   public class Indirect : Parameter
     {
-        public Indirect ()
+        public Indirect(string value) : base (value)
         {
 
 

@@ -9,7 +9,7 @@ namespace test_génétique.Instruction_possibles
 {
     class Sti : Instruction
     {
-        public Sti() : base ()
+        public Sti(List<Parameter> parameters) : base(parameters)
         {
             red_code = "sti";
 

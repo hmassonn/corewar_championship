@@ -9,7 +9,7 @@ namespace test_génétique.Instruction_possibles
 {
     class Lld_ : Instruction
     {
-        public Lld_() : base ()
+        public Lld_(List<Parameter> parameters) : base(parameters)
         {
             red_code = "lld";
         }

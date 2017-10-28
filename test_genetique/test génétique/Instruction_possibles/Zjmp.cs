@@ -9,10 +9,10 @@ namespace test_génétique.Instruction_possibles
 {
     class Zjmp : Instruction
     {
-        public Zjmp() : base ()
+        public Zjmp(List<Parameter> parameters) : base(parameters)
         {
             red_code = "zjmp";
-            para_possible.Add(new Direct());
+           // para_possible.Add(new Direct());
             
 
 

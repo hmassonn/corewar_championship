@@ -9,7 +9,7 @@ namespace test_génétique.Instruction_possibles
 {
     class Xor : Instruction
     {
-        public Xor() : base ()
+        public Xor(List<Parameter> parameters) : base(parameters)
         {
             red_code = "xor";
         }

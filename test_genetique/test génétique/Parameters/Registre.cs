@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace test_génétique.Parameters
 {
-    public class Registre : Param
+    public class Registre : Parameter
     {
-        public Registre ()
+        public Registre(string value) : base(value)
         {
 
         }

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace test_génétique.Parameters
 {
-   public class Direct : Param
+   public class Direct : Parameter
     {
         
 
-        public Direct ()
+        public Direct(string value) : base(value)
         {
 
 

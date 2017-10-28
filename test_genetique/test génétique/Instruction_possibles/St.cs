@@ -10,12 +10,14 @@ namespace test_génétique.Instruction_possibles
     class St : Instruction
     {
 
-        public St() : base ()
+        public St(List<Parameter> parameters) : base(parameters)
         {
             red_code = "st";
+            /*
             para_possible.Add(new Registre());
             para_possible.Add(new Indirect());
             para_possible.Add(new Registre());
+            */
 
         }
     }

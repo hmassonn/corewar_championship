@@ -9,7 +9,7 @@ namespace test_génétique.Instruction_possibles
 {
     class And_ : Instruction
     {
-        public And_() : base ()
+        public And_(List<Parameter> parameters) : base (parameters)
         {
             red_code = "and";
 

@@ -9,7 +9,7 @@ namespace test_génétique.Instruction_possibles
 {
     class Lldi_ : Instruction
     {
-        public Lldi_() : base ()
+        public Lldi_(List<Parameter> parameters) : base(parameters)
         {
             red_code = "lldi";
 
