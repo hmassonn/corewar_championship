@@ -9,9 +9,10 @@ namespace test_génétique.Instruction_possibles
 {
     class Ldi : Instruction
     {
+        public const string RED_CODE = "ldi";
+
         public Ldi(List<Parameter> parameters) : base (parameters)
         {
-            red_code = "ldi";
         }
     }
 }

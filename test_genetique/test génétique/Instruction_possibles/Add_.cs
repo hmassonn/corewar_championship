@@ -9,9 +9,10 @@ namespace test_génétique.Instruction_possibles
 {
     class Add_ : Instruction
     {
+        public const string RED_CODE = "add";
+
         public Add_(List<Parameter> parameters) : base (parameters)
         {
-            red_code = "add";
             /*
             para_possible.Add(new Registre());
             para_possible.Add(new Registre());

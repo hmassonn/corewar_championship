@@ -9,9 +9,10 @@ namespace test_génétique.Instruction_possibles
 {
     class Lfork_ : Instruction
     {
+        public const string RED_CODE = "lfork";
+
         public Lfork_(List<Parameter> parameters) : base (parameters)
         {
-            red_code = "lfork";
            // para_possible.Add(new Direct ());
         }
     }

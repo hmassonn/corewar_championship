@@ -13,7 +13,7 @@ namespace test_génétique
         {
             this.Id = id;//Toujour le traceur de solution
             this.Instructions = instructions;
-            
+
         }
 
         // Méthode c# pour trier
@@ -24,6 +24,20 @@ namespace test_génétique
             if (this.Nb_succes > (obj as Champion).Nb_succes)
                 return 1;
             return 0;
+        }
+
+        public void generateRedCode()
+        {
+            if (!Id)
+                Id = "default";
+            string path = @"D:\Hugo\corewar_championship\ressources\champsgenerated\";
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(path+Id+".cor");
+            {
+                foreach (Instruction instruction in Instructions)
+                {
+                    file.WriteLine("\t"+instruction.toString());
+                }
+            }
         }
 
         /*

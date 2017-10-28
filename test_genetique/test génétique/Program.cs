@@ -30,7 +30,7 @@ namespace test_génétique
             Genetics Darwin = new Genetics(randomyse, facto, range, nb_generation, begining_pop, hybridation_rate, mutation_rate, selection_rate);
 
             Champion Champ = Darwin.Run_genetics();*/
-          
+
         }
 
         public static void readFile()
@@ -43,7 +43,7 @@ namespace test_génétique
             List<Instruction> listInstructions = new List<Instruction>();
 
             //System.IO.StreamReader file = new System.IO.StreamReader(@"c:\test.txt");
-            System.IO.StreamReader file = new System.IO.StreamReader(@path);
+            System.IO.StreamReader file = new System.IO.StreamReader(path);
             string line;
             while ((line = file.ReadLine()) != null)
             {
@@ -65,17 +65,19 @@ namespace test_génétique
                 foreach (string str_parameter in str_parameters.Split(','))
                 {
                     string str_parameter_ = str_parameter.Replace(" ", "");
-                   
+
                     // Define str_parameter_'s value
                     string parameter_value = str_parameter_.Replace("%", "");
                     parameter_value = parameter_value.Replace("r", "");
-                    
+
 
                     Parameter parameter;
                     // Define str_parameter_'s type
-                    if (str_parameter_.IndexOf('%') > -1)
+                    //if (str_parameter_.IndexOf('%') > -1)
+                    if(str_parameter_.IndexOf(Direct.TYPE_CODE) > 1)
                         parameter = new Direct(parameter_value);
-                    else if (str_parameter_.IndexOf('r') > -1)
+                    //else if (str_parameter_.IndexOf('r') > -1)
+                    else if (str_parameter_.IndexOf(Registre.TYPE_CODE) > -1)
                         parameter = new Registre(parameter_value);
                     else
                         parameter = new Indirect(parameter_value);
@@ -92,7 +94,7 @@ namespace test_génétique
 
             file.Close();
 
-            
+            champion.generateRedCode(); //TODO:: A TESTER
 
         }
     }
