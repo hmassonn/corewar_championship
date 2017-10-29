@@ -38,7 +38,7 @@ namespace test_génétique
             string path = Program.CHAMPIONS_NEW_FOLDER + id_str + ".cor.gen";
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(path))
             {
-                file.WriteLine("Champion : "+this.Id.ToString()+"\n" + DateTime.Now.ToString()+ "\n MaChOe team pour vous servire ;)"+ "\n");
+                file.WriteLine(".name \" "+this.Id.ToString()+"\n.comment \"" + DateTime.Now.ToString()+ "\n MaChOeTeam pour vous servir\""+ "\n");
                 foreach (Instruction instruction in Instructions)
                 {
                     file.WriteLine("\t"+instruction.toString());

@@ -1,6 +1,6 @@
-Champion : Generation: 0 Individu: 3 Mutation: 0
-29/10/2017 13:09:33
- MaChOe team pour vous servire ;)
+.name " Generation: 0 Individu: 3 Mutation: 0
+.comment "29/10/2017 13:21:16
+ MaChOe team pour vous servir"
 
 	ld 0, r2
 	st r1, 211
