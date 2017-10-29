@@ -25,6 +25,7 @@
 # include <sys/stat.h>
 # include <sys/xattr.h>
 # include <sys/types.h>
+# include <sys/time.h>
 # include <uuid/uuid.h>
 # include "libft.h"
 
@@ -33,7 +34,13 @@
 #define N_CHILD		10
 #define N_TARGET	1
 #define PATH_CHAMPIONSHIP "champions/"
+#define DELTA_US_MAX 500000
 // #define MV_ALL_FILE		for f in *.cor.dmp; do mv "$f" "`echo $f | sed s/.cor.dmp/.s/`"; done
+
+// typedef struct			s_resu
+// {
+// 	int					res[5050][3];
+// }						t_resu;
 
 /*
 **		dans initial.c

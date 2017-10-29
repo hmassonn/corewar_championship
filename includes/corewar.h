@@ -33,6 +33,7 @@
 # define Y_WIN Y_MAP
 
 # include "libft.h"
+# include "algen.h"
 # include <unistd.h>
 # include <fcntl.h>
 # include <stdbool.h>
@@ -101,6 +102,7 @@ typedef struct			s_mars
 }						t_mars;
 
 void					ft_vm(char **av);
+void					ft_run_mars(t_mars *mars, t_cpu *cpu, struct timespec start);
 void					ft_ncurses_init(void);
 void					ft_music_load(t_mars **mars, t_cpu *cpu);
 void					ft_flush(t_mars *mars);
@@ -166,7 +168,6 @@ t_cpu					*ft_get_cycle_wait(t_cpu *cpu, unsigned char opcode);
 t_cpu					*ft_get_opcode(t_mars **mars, t_cpu *cpu, int opcode);
 void					ft_run_cpu(t_mars **mars, t_cpu **cpu);
 int						ft_kill_cpu(t_mars **mars, t_cpu **cpu);
-void					ft_run_mars(t_mars *mars, t_cpu *cpu, int timeinfobegin);
 void					ft_draw_case_line(t_mars *mars, int x1, int x2, int y);
 void					ft_draw_skull_1(t_mars *mars);
 void					ft_draw_skull_2(t_mars *mars);

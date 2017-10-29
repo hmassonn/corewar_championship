@@ -123,30 +123,26 @@ int		ft_kill_cpu(t_mars **mars, t_cpu **cpu)
 	return (nlive);
 }
 
-void	ft_run_mars(t_mars *mars, t_cpu *cpu, int timeinfobegin)
+void	ft_run_mars(t_mars *mars, t_cpu *cpu, struct timespec start)
 {
 	char		dump;
-	time_t		nowtime;
-	struct tm	*timeinfonow;
+	struct timespec end;
+	uint64_t delta_us;
 
 	dump = 0;
 	if ((mars->opt & 0b01000010) == 0b01000010)
 		ft_music_load(&mars, cpu);
 	while (42)
 	{
-		if (mars->cycle % 1000 == 0)
+		if (mars->cycle % 10 == 0)
 		{
-			time(&nowtime);
-			timeinfonow = localtime(&nowtime);
-			if (timeinfonow->tm_sec >= timeinfobegin + 2 || (timeinfobegin == 58 && timeinfonow->tm_sec >= 0) || (timeinfobegin == 59 && timeinfonow->tm_sec >= 1))
+			clock_gettime(CLOCK_MONOTONIC_RAW, &end);
+			delta_us = (end.tv_sec - start.tv_sec) * 1000000 + (end.tv_nsec - start.tv_nsec) / 1000;
+			if (delta_us > DELTA_US_MAX)
+			{
+				ft_putendl("égualitée");
 				return ;
-		}
-		if ((timeinfonow->tm_sec >= timeinfobegin + 1 || (timeinfobegin == 59 && timeinfonow->tm_sec >= 0) || (timeinfobegin == 58 && timeinfonow->tm_sec == 59) || (timeinfobegin == 58 && timeinfonow->tm_sec >= 0)) && mars->cycle % 100 == 0)
-		{
-			time(&nowtime);
-			timeinfonow = localtime(&nowtime);
-			if (timeinfonow->tm_sec >= timeinfobegin + 2 || (timeinfobegin == 58 && timeinfonow->tm_sec >= 0) || (timeinfobegin == 59 && timeinfonow->tm_sec >= 1))
-				return ;
+			}
 		}
 		if (mars->dump == mars->cycle && (dump = 1))
 			break ;

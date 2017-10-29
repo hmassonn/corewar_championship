@@ -102,13 +102,10 @@ void		ft_vm(char **av)
 	t_cpu	*cpu;
 	t_mars	*mars;
 	char	opt;
-	int		dump = -1, time_begin;
-	time_t		begintime;
-	struct tm	*timeinfobegin;
+	int		dump = -1;
+	struct timespec start;
 
-	time(&begintime);
-	timeinfobegin = localtime(&begintime);
-	time_begin = timeinfobegin->tm_sec;
+	clock_gettime(CLOCK_MONOTONIC_RAW, &start);
 	ft_get_opt(&opt, &dump, av, 4);
 	opt = 0b00100000;
 	cpu = NULL;
@@ -117,7 +114,7 @@ void		ft_vm(char **av)
 	mars = ft_new_mars(&cpu, opt, dump);
 	// if (opt & 0b00000100)
 	// 	ft_ncurses_init();
-	ft_run_mars(mars, cpu, time_begin);
+	ft_run_mars(mars, cpu, start);
 	// if (opt & 0b00000100)
 	// {
 	// 	getch();

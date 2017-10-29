@@ -16,7 +16,7 @@
 int		find_name(char **name, DIR **ptdir)
 {
 	struct dirent	*entree;
-	static int		init = 0;
+	static int		init = 0, len;
 
 	if (init == 0)
 		*ptdir = opendir(PATH_CHAMPIONSHIP);
@@ -36,8 +36,12 @@ int		find_name(char **name, DIR **ptdir)
 	entree = readdir(*ptdir);
 	if (!entree)
 		return 0;
-	while (!strcmp(entree->d_name, ".") || !strcmp(entree->d_name, ".."))
+	len = strlen(entree->d_name);
+	while (!strcmp(entree->d_name, ".") || !strcmp(entree->d_name, "..") || entree->d_name[len - 1] != 's')
+	{
 		entree = readdir(*ptdir);
+		len = strlen(entree->d_name);
+	}
 	if (entree != NULL)
 		*name = ft_strdup(entree->d_name);
 	return 1;

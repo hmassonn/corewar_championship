@@ -36,7 +36,7 @@ void	open_it(t_intmain *itm, char *name, t_inst *champ, t_header *head)
 	char		*new;
 
 	new = s_to_cor(name);
-	if (close(itm->fd) || (itm->fd = open(new, O_CREAT | O_WRONLY, 0666)) < 1)
+	if (close(itm->fd) || (itm->fd = open(new, O_CREAT | O_WRONLY, 0777)) < 1)
 		ft_error("Can't creat file core");
 	print_option(head, champ, *itm, new);
 	close(itm->fd);

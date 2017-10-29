@@ -54,7 +54,7 @@ int		main(int ac, char **av)
 	while (i < POP_SIZE)
 		pool[i++] = NULL;
 	initial(av, &pool);
-	ft_arrprint(pool);
+	// ft_arrprint(pool);
 	fight(pool);
 	ft_deltab(&pool);
 	return (0);
