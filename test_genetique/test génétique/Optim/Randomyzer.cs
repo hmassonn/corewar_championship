@@ -10,34 +10,23 @@ namespace test_génétique
     {
         private Random rdm = new Random(); // Making the random object global because we used to create many randoms quickly.
                                            // This causes random seeds to be the same, so randoms objects gave the same values.
-                                           // Making one global random instance avoids this problem.
-      
-        public Field Bornes { get; private set; }
-
-
-        public Randomyzer( Field bornes)
+       
+        public Randomyzer( )
         {
-            this.Bornes = bornes;
+          
         }
 
-        public Champion Next_solution(Field field, int Nb_individual)
+        public Champion Next_solution (int Nb_individual)
         {
             return null;
             //return new Champion(Random_Cara1(field), Random_Cara2(field), new ID (0,Nb_individual++,0));
         }
 
 
-        public double Random_Cara1(Field field)
+        public int Coin ()
         {
-            return rdm.Next(field.Min, field.Min);
+            return rdm.Next(0, 1);
         }
-
-
-        public double Random_Cara2(Field field)
-        {
-            return rdm.Next(field.Min, field.Max);
-        }
-
 
     }
 }

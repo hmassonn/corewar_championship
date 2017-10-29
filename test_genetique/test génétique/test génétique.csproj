@@ -45,7 +45,6 @@
   <ItemGroup>
     <Compile Include="ParameterData.cs" />
     <Compile Include="Optim\Factory.cs" />
-    <Compile Include="Field.cs" />
     <Compile Include="Optim\Génétics.cs" />
     <Compile Include="ID.cs" />
     <Compile Include="Instruction_possibles\And_.cs" />

@@ -9,8 +9,7 @@ namespace test_génétique
     public class Genetics
     {
         public Randomyzer Randomyse { get; private set; }
-        public Factory Facto { get; private set; }
-        public Field Range { get; private set; }
+        public Factory Facto { get; private set; }       
 
         public double Selection_rate { get; private set; }
         public double Mutation_rate { get; private set; }
@@ -34,11 +33,10 @@ namespace test_génétique
         /// <param name="hyb_rate">Taux d'hybridation (à paramétrer dans un deuxiem temps)</param>
         /// <param name="mut_rate">Taux de mutation (à paramétrer dans un deuxiem temps)</param>
         /// <param name="sel_rate">Taux de selection (à paramétrer dans un deuxiem temps)</param>
-        public Genetics(Randomyzer randomyse, Factory facto, Field field, int nb_iter, int begin_pop, double hyb_rate, double mut_rate, double sel_rate)
+        public Genetics(Randomyzer randomyse, Factory facto,  int nb_iter, int begin_pop, double hyb_rate, double mut_rate, double sel_rate)
         {
             this.Randomyse = randomyse;
-            this.Facto = facto;
-            this.Range = field;
+            this.Facto = facto;          
 
             Begin_pop = begin_pop;
             Generation_max = nb_iter;
@@ -58,7 +56,7 @@ namespace test_génétique
             List<Champion> Population_after_Hybridation = new List<Champion>();
             List<Champion> Population_after_Mutation = new List<Champion>();
 
-            Facto.Generate_solutions(Begin_pop, Range);
+            //Facto.Generate_solutions(Begin_pop);
             Population = Facto.random_pop;
 
             // Begining of iterations
@@ -84,7 +82,7 @@ namespace test_génétique
 
                 // Mutation
                 //----------------------------------------------------------------------------------------
-                Population_after_Mutation = Evolution.Mutation(Randomyse, Population, Range, Mutation_rate, Generation_nb);
+                Population_after_Mutation = Evolution.Mutation(Randomyse, Population, Mutation_rate, Generation_nb);
                 Population = new List<Champion>(Population_after_Hybridation);
                 Population_after_Mutation.Clear();
             }
