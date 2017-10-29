@@ -9,7 +9,7 @@ namespace test_génétique.Instruction_possibles
 {
     class Live : Instruction
     {
-        public const string RED_CODE = "live";
+        public new string red_code = "live";
 
         public Live(List<Parameter> parameters = null) : base(parameters)
         {

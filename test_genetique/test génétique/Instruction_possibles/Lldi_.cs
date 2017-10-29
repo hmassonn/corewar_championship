@@ -7,12 +7,13 @@ using test_génétique.Parameters;
 
 namespace test_génétique.Instruction_possibles
 {
-    class Lld_ : Instruction
+    class Lldi_ : Instruction
     {
-        public const string RED_CODE = "lld";
+        public new string red_code = "lldi";
 
-        public Lld_(List<Parameter> parameters = null) : base(parameters)
+        public Lldi_(List<Parameter> parameters = null) : base(parameters)
         {
+
         }
     }
 }

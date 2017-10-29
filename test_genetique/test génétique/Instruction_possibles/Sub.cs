@@ -9,7 +9,7 @@ namespace test_génétique.Instruction_possibles
 {
     class Sub : Instruction
     {
-        public const string RED_CODE = "sub";
+        public new string red_code = "sub";
 
         public Sub(List<Parameter> parameters = null) : base(parameters)
         {

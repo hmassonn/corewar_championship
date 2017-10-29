@@ -9,7 +9,7 @@ namespace test_génétique.Instruction_possibles
 {
     class Zjmp : Instruction
     {
-        public const string RED_CODE = "zjmp";
+        public new string red_code = "zjmp";
 
         public Zjmp(List<Parameter> parameters = null) : base(parameters)
         {

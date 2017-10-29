@@ -9,10 +9,11 @@ namespace test_génétique.Instruction_possibles
 {
     class Ld : Instruction
     {
-        public const string RED_CODE = "ld";
+        public new string red_code = "ld";
 
         public Ld(List<Parameter> parameters = null) : base (parameters)
         {
+            red_code = "ld";
             /*
             if (entre[0][0] == "dir")
                 para_possible.Add(new Direct( entre[0][1] ));

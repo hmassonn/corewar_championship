@@ -9,7 +9,7 @@ namespace test_génétique.Parameters
 {
     public class Direct : Parameter
     {
-        public const char RED_CODE = '%';
+        public string red_code = "%";
 
         public const int VALUE_MIN = -4000;
         public const long VALUE_MAX = 4294967295;
@@ -17,6 +17,17 @@ namespace test_génétique.Parameters
         public Direct(string value) : base(value)
         {
 
+        }
+
+        public static string getRedCode()
+        {
+            return "%";
+        }
+
+        public new string toString()
+        {
+            return "%" + this.value;
+            //return base.toString();
         }
     }
 }

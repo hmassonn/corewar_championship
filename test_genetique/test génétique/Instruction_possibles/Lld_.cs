@@ -7,13 +7,12 @@ using test_génétique.Parameters;
 
 namespace test_génétique.Instruction_possibles
 {
-    class Lfork_ : Instruction
+    class Lld_ : Instruction
     {
-        public const string RED_CODE = "lfork";
+        public new string red_code = "lld";
 
-        public Lfork_(List<Parameter> parameters = null) : base (parameters)
+        public Lld_(List<Parameter> parameters = null) : base(parameters)
         {
-           // para_possible.Add(new Direct ());
         }
     }
 }
