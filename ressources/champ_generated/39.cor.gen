@@ -1,0 +1,8 @@
+.name " Generation: 0 Individu: 39 Mutation: 0
+.comment "29/10/2017 13:21:17
+ MaChOe team pour vous servir"
+
+	sti r1, 15, 1
+	and r1, 0, r1
+	live 1
+	zjmp -5

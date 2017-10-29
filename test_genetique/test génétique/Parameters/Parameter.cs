@@ -12,19 +12,25 @@ namespace test_génétique.Parameters
         public int weight { get; set; }
         public string value { get; set; }
 
-        public const char RED_CODE = 'Z';
+        //public string redcode = "Z";
+        public virtual string redcode => "z";
 
-        public const string VALUE_MIN = 0;
-        public const string VALUE_MAX = 1;
+        public const int VALUE_MIN = 0;
+        public const int VALUE_MAX = 1;
 
         public Parameter (string value)
         {
             this.value = value;
         }
 
-        public void toString()
+        public virtual string toString()
         {
-            return this.RED_CODE+this.value;
+            return redcode + value;
+        }
+
+        public virtual string getRedCode()
+        {
+            return redcode;
         }
     }
 }

@@ -11,29 +11,29 @@ namespace test_génétique
     {
         //public string type_I { get; private set; }
         public List <Parameter> para_possible { get; protected set; }
-        public List<Parameter> parameters { get; protected set; }
+        public List<Parameter> parameters { get; set; }
 
         public int weight_I { get; private set; }
 
-        public string red_code { get; protected set; }
-
-        public const string RED_CODE = "default";
+        public string red_code = "d";
 
         public Instruction (List<Parameter> parameters = null)
         {
             this.parameters = parameters;
         }
 
-        public string toString()
+        public virtual string toString()
         {
-            string res = this.RED_CODE +" ";
+            string res = red_code + " ";
 
             foreach(Parameter parameter in parameters)
             {
                 res+= parameter.toString()+", ";
             }
 
-            res = res.Substring(0, res.length-2); //TODO :: vérifier si la taille est OK
+            res = res.Substring(0, res.Length-2); //TODO :: vérifier si la taille est OK
+
+            return res;
         }
     }
 }

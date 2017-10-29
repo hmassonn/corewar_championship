@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 using test_génétique.Instruction_possibles;
 using test_génétique.Parameters;
@@ -11,6 +12,10 @@ namespace test_génétique
 {
     class Program
     {
+
+        public const string CHAMPIONS_FOLDER = @"D:\Hugo\corewar_championship\ressources\champstest\"; //TODO: ASSIGN THIS VALUE
+        public const string CHAMPIONS_NEW_FOLDER = @"D:\Hugo\corewar_championship\ressources\champ_generated\";
+
         static void Main(string[] args)
         {
             // rates are to be optimyze latter on
@@ -21,7 +26,15 @@ namespace test_génétique
             int begining_pop = 100;
             int nb_generation = 300;
 
-            readFile();
+
+
+            List<Champion> champions = new List<Champion>();
+
+            champions = initChampions(champions);
+
+            generateChampionsfiles(champions);
+
+
 
             //Console.ReadKey();
             /*Field range = new Field(10, 20);
@@ -33,22 +46,50 @@ namespace test_génétique
 
         }
 
-        public static void readFile()
+        public static List<Champion> initChampions(List<Champion> champions)
+        {
+            string[] filePaths = Directory.GetFiles(CHAMPIONS_FOLDER);
+            int i = 0;
+
+            foreach(string filename in filePaths)
+            {
+                
+                if (filename.IndexOf(".dmp") > -1) {
+                    i += 1;
+                    Champion champion = new Champion(readInstructions(filename), i.ToString(), new ID(0,i,0));
+                    champions.Add(champion);
+                }
+            }
+
+            return champions;
+        }
+
+        public static void generateChampionsfiles(List<Champion> champions)
+        {
+            foreach(Champion champion in champions){
+                champion.generateRedCode(); //TODO:: A TESTER
+            }
+        }
+
+        public static List<Instruction> readInstructions(string filePath)
         {
             int width = 0;
 
-            string path = @"D:\Hugo\corewar_championship\ressources\champstest\Asombra.cor.dmp";
+            //string path = @"D:\Hugo\corewar_championship\ressources\champstest\Asombra.cor.dmp";
 
             // Init str_instruction list
             List<Instruction> listInstructions = new List<Instruction>();
 
             //System.IO.StreamReader file = new System.IO.StreamReader(@"c:\test.txt");
-            System.IO.StreamReader file = new System.IO.StreamReader(path);
+            StreamReader file = new System.IO.StreamReader(filePath);
             string line;
             while ((line = file.ReadLine()) != null)
             {
                 // If it's a comment line then go to the next one
-                if (line[0] == '.' || line== "" ) //TODO pensser a ignorer les lignes vides
+                if (line.Equals(null) || line == string.Empty) //TODO pensser a ignorer les lignes vides
+                    continue;
+
+                if (line[0] == '.')
                     continue;
 
                 // clean the line
@@ -74,10 +115,10 @@ namespace test_génétique
                     Parameter parameter;
                     // Define str_parameter_'s type
                     //if (str_parameter_.IndexOf('%') > -1)
-                    if(str_parameter_.IndexOf(Direct.TYPE_CODE) > 1)
+                    if(str_parameter_.IndexOf(Direct.getRedCode()) > 1)
                         parameter = new Direct(parameter_value);
                     //else if (str_parameter_.IndexOf('r') > -1)
-                    else if (str_parameter_.IndexOf(Registre.TYPE_CODE) > -1)
+                    else if (str_parameter_.IndexOf(Registre.getRedCode()) > -1)
                         parameter = new Registre(parameter_value);
                     else
                         parameter = new Indirect(parameter_value);
@@ -99,7 +140,7 @@ namespace test_génétique
                       break;
 
                   case "fork":
-                      instruction = new Fork();
+                      instruction = new Fork_();
                       break;
 
                   case "ld":
@@ -111,7 +152,7 @@ namespace test_génétique
                       break;
 
                   case "lfork":
-                      instruction = new Lfork();
+                      instruction = new Lfork_();
                       break;
 
                   case "live":
@@ -119,11 +160,11 @@ namespace test_génétique
                       break;
 
                   case "lld":
-                      instruction = new Lld();
+                      instruction = new Lld_();
                       break;
 
                   case "lldi":
-                      instruction = new Lldi();
+                      instruction = new Lldi_();
                       break;
 
                   case "or":
@@ -152,18 +193,15 @@ namespace test_génétique
 
                   default:
                       instruction = new Instruction();
+                      break;
                 }
-                instruction.listParameters = listParameters;
+                instruction.parameters = listParameters;
                 listInstructions.Add(instruction);
-                width++;
             }
-
-
-            Champion champion = new Champion(listInstructions);
 
             file.Close();
 
-            champion.generateRedCode(); //TODO:: A TESTER
+            return listInstructions;
 
         }
     }

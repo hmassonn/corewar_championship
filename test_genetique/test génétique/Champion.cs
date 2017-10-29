@@ -6,12 +6,16 @@ namespace test_génétique
     {
         public List<Instruction> Instructions { get; private set; }
         public ID Id { get; private set; } // C'est le "code bar" de la solution. ca va nous permettre de suivre les solution tt au long de l'algo
+
+        public string id_str { get; private set; }
+
         public int Nb_succes { get; private set; }
 
         //Constructeur
-        public Champion(List<Instruction> instructions, ID id=null)
+        public Champion(List<Instruction> instructions, string id_str = null, ID id=null)
         {
             this.Id = id;//Toujour le traceur de solution
+            this.id_str = id_str;
             this.Instructions = instructions;
 
         }
@@ -27,12 +31,14 @@ namespace test_génétique
         }
 
         public void generateRedCode()
-        {
-            if (!Id)
-                Id = "default";
-            string path = @"D:\Hugo\corewar_championship\ressources\champsgenerated\";
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(path+Id+".cor");
+        {            
+            if (id_str.Equals(null))
+                this.id_str = "default";
+
+            string path = Program.CHAMPIONS_NEW_FOLDER + id_str + ".cor.gen";
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(path))
             {
+                file.WriteLine(".name \" "+this.Id.ToString()+"\n.comment \"" + DateTime.Now.ToString()+ "\n MaChOeTeam pour vous servir\""+ "\n");
                 foreach (Instruction instruction in Instructions)
                 {
                     file.WriteLine("\t"+instruction.toString());

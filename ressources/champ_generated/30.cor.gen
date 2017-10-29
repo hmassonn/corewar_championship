@@ -1,0 +1,55 @@
+.name " Generation: 0 Individu: 30 Mutation: 0
+.comment "29/10/2017 13:21:17
+ MaChOe team pour vous servir"
+
+	live 1
+	fork -10
+	live 1
+	fork -10
+	live 1
+	fork -10
+	live 1
+	fork -10
+	live 1
+	fork -10
+	live 1
+	fork -10
+	live 1
+	fork -10
+	live 1
+	fork -10
+	live 1
+	fork -10
+	zjmp -72
+	ld 25, r4
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	st r4, -500
+	zjmp -160

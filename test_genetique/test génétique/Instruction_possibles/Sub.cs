@@ -9,7 +9,7 @@ namespace test_génétique.Instruction_possibles
 {
     class Sub : Instruction
     {
-        public const string RED_CODE = "sub";
+        public new string red_code = "sub";
 
         public Sub(List<Parameter> parameters = null) : base(parameters)
         {
@@ -19,6 +19,20 @@ namespace test_génétique.Instruction_possibles
             para_possible.Add(new Registre());
             */
 
+        }
+
+        public override string toString()
+        {
+            string res = red_code + " ";
+
+            foreach (Parameter parameter in parameters)
+            {
+                res += parameter.toString() + ", ";
+            }
+
+            res = res.Substring(0, res.Length - 2); //TODO :: vérifier si la taille est OK
+
+            return res;
         }
     }
 }

@@ -9,11 +9,26 @@ namespace test_génétique.Instruction_possibles
 {
     class Or_ : Instruction
     {
-        public const string RED_CODE = "or";
+        public new string red_code = "or";
 
         public Or_(List<Parameter> parameters = null) : base(parameters)
         {
 
         }
+
+        public override string toString()
+        {
+            string res = red_code + " ";
+
+            foreach (Parameter parameter in parameters)
+            {
+                res += parameter.toString() + ", ";
+            }
+
+            res = res.Substring(0, res.Length - 2); //TODO :: vérifier si la taille est OK
+
+            return res;
+        }
+
     }
 }

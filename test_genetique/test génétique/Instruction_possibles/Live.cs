@@ -9,12 +9,25 @@ namespace test_génétique.Instruction_possibles
 {
     class Live : Instruction
     {
-        public const string RED_CODE = "live";
+        public new string red_code = "live";
 
         public Live(List<Parameter> parameters = null) : base(parameters)
         {
             //para_possible.Add(new Direct());
         }
 
+        public override string toString()
+        {
+            string res = red_code + " ";
+
+            foreach (Parameter parameter in parameters)
+            {
+                res += parameter.toString() + ", ";
+            }
+
+            res = res.Substring(0, res.Length - 2); //TODO :: vérifier si la taille est OK
+
+            return res;
+        }
     }
 }
