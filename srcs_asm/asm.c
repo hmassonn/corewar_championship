@@ -17,8 +17,9 @@ void	print_option(t_header *head, t_inst *champ, t_intmain itm, char *new)
 	if (itm.opt == 0)
 	{
 		fill_file(itm.fd, head, champ);
-		ft_putstr("Writing output program to ");
-		ft_putendl(new);
+		// ft_putstr("Writing output program to ");
+		// ft_putendl(new);
+		(void)new;
 	}
 	else
 	{

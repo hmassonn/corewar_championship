@@ -28,8 +28,10 @@ void	bzero_champ() {
 	int		i = 0;
 
 	g_champ.cursor = 0;
-	while (i < 5050)
+	while (i <= 5050)
 	{
+		if (i <= POP_SIZE)
+			g_champ.champ[i] = 0;
 		g_champ.res[i][0] = 0;
 		g_champ.res[i][1] = 0;
 		g_champ.res[i][2] = 0;
@@ -55,8 +57,8 @@ void	fight(char **pool)
 		while (j < POP_SIZE)
 		{
 			arg[3] = ft_strjoin(pool[j], ".cor");
-			g_champ.res[g_champ.cursor][0] = i+1;
-			g_champ.res[g_champ.cursor][1] = j+1;
+			g_champ.res[g_champ.cursor][0] = i;
+			g_champ.res[g_champ.cursor][1] = j;
 			ft_vm(arg);
 			free(arg[3]);
 			j++;
@@ -72,7 +74,8 @@ void	fight(char **pool)
 int		main(int ac, char **av)
 {
 	char	**pool;
-	int		i = 0, fd;
+	int		i = 0, fd, len_path, pos;
+	char	*first;
 
 	(void)ac;
 	bzero_champ();
@@ -85,15 +88,53 @@ int		main(int ac, char **av)
 	i = 0;
 	if ((fd = open("results", O_CREAT | O_WRONLY, 0777)) < 1)
 		my_error("probleme sur le fichier results");
-	while (i < 854)
+	len_path = strlen(PATH_CHAMPIONSHIP);
+	// ft_arrprint(pool);
+	while (i < 858)
 	{
-		ft_putnbr_fd(g_champ.res[i][0], fd);
-		ft_putchar_fd(' ', fd);
-		ft_putnbr_fd(g_champ.res[i][1], fd);
-		ft_putchar_fd(' ', fd);
-		ft_putchar_fd(g_champ.res[i++][2], fd);
-		ft_putchar_fd('\n', fd);
+		if (g_champ.res[i][2] != '0')
+		{
+			pos = atoi(&g_champ.res[i][2]) - 1;
+			g_champ.champ[(int)g_champ.res[i][pos]]++;
+			// printf("i: %d pos: %d g_champ.res[i][pos]: %d\n", i, pos, (int)g_champ.res[i][pos]);
+		}
+		i++;
 	}
+	i = 0;
+	while (i < POP_SIZE)
+	{
+		first = ft_strsub(pool[i], len_path, strlen(pool[i]) - len_path);
+		ft_putstr_fd(first, fd);
+		ft_putchar_fd(' ', fd);
+		ft_putnbr_fd(g_champ.champ[i], fd);
+		ft_putchar_fd('\n', fd);
+		// ft_putstr_fd(first, 2);
+		// ft_putchar_fd(' ', 2);
+		// ft_putnbr_fd(g_champ.champ[i], 2);
+		// ft_putchar_fd('\n', 2);
+		i++;
+	}
+	// // ft_putnbr_fd((int)g_champ.res[i][0], 2);
+	// // ft_putchar_fd(' ', 2);
+	// // ft_putnbr_fd((int)g_champ.res[i][1], 2);
+	// // ft_putchar_fd(' ', 2);
+	// // ft_putstr_fd(pool[(int)g_champ.res[i][0]], 2);
+	// // ft_putchar_fd(' ', 2);
+	// // ft_putstr_fd(pool[(int)g_champ.res[i][1]], 2);
+	// // ft_putchar_fd(' ', 2);
+	// first = ft_strsub(pool[(int)g_champ.res[i][0]], len_path, strlen(pool[(int)g_champ.res[i][0]]) - len_path);
+	// sec = ft_strsub(pool[(int)g_champ.res[i][1]], len_path, strlen(pool[(int)g_champ.res[i][1]]) - len_path);
+	// // ft_putstr_fd(first, 2);
+	// // ft_putchar_fd(' ', 2);
+	// // ft_putstr_fd(sec, 2);
+	// // ft_putchar_fd(' ', 2);
+	// // ft_putchar_fd('\n', 2);
+	// ft_putstr_fd(first, fd);
+	// ft_putchar_fd(' ', fd);
+	// ft_putstr_fd(sec, fd);
+	// ft_putchar_fd(' ', fd);
+	// ft_putchar_fd(g_champ.res[i++][2], fd);
+	// ft_putchar_fd('\n', fd);
 	close(fd);
 	ft_deltab(&pool);
 	return (0);

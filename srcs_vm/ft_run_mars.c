@@ -140,7 +140,7 @@ void	ft_run_mars(t_mars *mars, t_cpu *cpu, struct timespec start)
 			delta_us = (end.tv_sec - start.tv_sec) * 1000000 + (end.tv_nsec - start.tv_nsec) / 1000;
 			if (delta_us > DELTA_US_MAX)
 			{
-				ft_putendl("égualitée");
+				// ft_putendl("égualitée");
 				cursuor_mod(2, 0);
 				cursor_plus();
 				return ;

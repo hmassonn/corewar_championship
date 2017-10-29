@@ -61,7 +61,7 @@ void	ft_print_winner(t_mars *mars, t_cpu *cpu)
 		if (lst->uid == mars->last_live)
 		{
 			mars->last_live = lst->color;
-			printf("le joueur %d(%s) a gagne\n", lst->color, lst->name);
+			// printf("le joueur %d(%s) a gagne\n", lst->color, lst->name);
 			// g_champ.res[g_champ.cursor][2] = lst->color;
 			// g_champ.cursor++;
 			cursuor_mod(2, lst->color);
