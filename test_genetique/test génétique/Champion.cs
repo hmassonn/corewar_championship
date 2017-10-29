@@ -30,8 +30,7 @@ namespace test_génétique
         {
             if (!Id)
                 Id = "default";
-            string path = @"D:\Hugo\corewar_championship\ressources\champsgenerated\";
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(path+Id+".cor");
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(Program.CHAMPIONS_NEW_FOLDER + Id + ".cor.gen");
             {
                 foreach (Instruction instruction in Instructions)
                 {

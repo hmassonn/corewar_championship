@@ -11,6 +11,10 @@ namespace test_génétique
 {
     class Program
     {
+
+        public const string CHAMPIONS_FOLDER = @"c:\MyDir\"; //TODO: ASSIGN THIS VALUE
+        public const string CHAMPIONS_NEW_FOLDER = @"";
+
         static void Main(string[] args)
         {
             // rates are to be optimyze latter on
@@ -21,7 +25,15 @@ namespace test_génétique
             int begining_pop = 100;
             int nb_generation = 300;
 
-            readFile();
+
+
+            List<Champion> champions = List<Champion>();
+
+            initChampions(champions);
+
+            generateChampionsfiles(champions);
+
+
 
             //Console.ReadKey();
             /*Field range = new Field(10, 20);
@@ -33,17 +45,37 @@ namespace test_génétique
 
         }
 
-        public static void readFile()
+        public void initChampions()
+        {
+            string[] filePaths = Directory.GetFiles(CHAMPIONS_FOLDER);
+
+            foreach(string filename in filePaths)
+            {
+                Champion champion = new Champion(readInstructions(filename), 1);
+                champions.Add(champion);
+            }
+
+            return champions;
+        }
+
+        public void generateChampionsfiles(List<Champion> champions)
+        {
+            foreach(Champion champion in champions){
+                champion.generateRedCode(path); //TODO:: A TESTER
+            }
+        }
+
+        public List<Instruction> readInstructions(string path)
         {
             int width = 0;
 
-            string path = @"D:\Hugo\corewar_championship\ressources\champstest\Asombra.cor.dmp";
+            //string path = @"D:\Hugo\corewar_championship\ressources\champstest\Asombra.cor.dmp";
 
             // Init str_instruction list
             List<Instruction> listInstructions = new List<Instruction>();
 
             //System.IO.StreamReader file = new System.IO.StreamReader(@"c:\test.txt");
-            System.IO.StreamReader file = new System.IO.StreamReader(path);
+            System.IO.StreamReader file = new System.IO.StreamReader(CHAMPIONS_FOLDER+path);
             string line;
             while ((line = file.ReadLine()) != null)
             {
@@ -155,15 +187,11 @@ namespace test_génétique
                 }
                 instruction.listParameters = listParameters;
                 listInstructions.Add(instruction);
-                width++;
             }
-
-
-            Champion champion = new Champion(listInstructions);
 
             file.Close();
 
-            champion.generateRedCode(); //TODO:: A TESTER
+            return listInstructions;
 
         }
     }
