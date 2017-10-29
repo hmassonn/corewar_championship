@@ -13,7 +13,9 @@ namespace test_génétique.Instruction_possibles
 
         public Zjmp(List<Parameter> parameters = null) : base(parameters)
         {
-           // para_possible.Add(new Direct());
+          List<string> possible_combination_9 = new List<string>{"T_DIR"};
+
+          parameters_possible_combinations.Add(possible_combination_1);
 
         }
 
