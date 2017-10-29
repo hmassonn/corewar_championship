@@ -29,11 +29,15 @@ namespace test_génétique
 
 
             List<Champion> champions = new List<Champion>();
+            List<Champion> Kids = new List<Champion>();
 
             champions = initChampions(champions);
+            Kids = Evolution.Hybridation(champions, 0.5, 1);
+
+            foreach (Champion kid in Kids)
+                champions.Add(kid);
 
             generateChampionsfiles(champions);
-
 
 
             //Console.ReadKey();
@@ -56,7 +60,8 @@ namespace test_génétique
                 
                 if (filename.IndexOf(".dmp") > -1) {
                     i += 1;
-                    Champion champion = new Champion(readInstructions(filename), i.ToString(), new ID(0,i,0));
+                    Champion champion = new Champion(readInstructions(filename),  new ID(0,i,0));
+                    champion.Nb_instruction = champion.Instructions.Count();
                     champions.Add(champion);
                 }
             }

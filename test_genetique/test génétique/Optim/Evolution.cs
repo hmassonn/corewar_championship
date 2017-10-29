@@ -87,41 +87,51 @@ namespace test_génétique
         {
             List<Champion> Kids = new List<Champion>();
             int number_to_hybrid = (int)Math.Round(Population.Count * hybridation_rate);
-            Random random = new Random(); // May be a mistake with random set this way, have a check on it!
             int nb_individual = 0;
 
-            /*
+            List<Instruction> Kids_instructions = new List<Instruction>();
+
+            List<int> test_randomyzer = new List<int>();
+
+
             for (int i = 0; i <= number_to_hybrid; i++)
             {
+                Randomyzer randomyse = new Randomyzer();
+                int nb_instru_to_hybride;
                 Champion parent1 = Lucky_Wheel(Population);
                 Champion parent2 = Lucky_Wheel(Population);
 
                 while (parent1.Id == parent2.Id)
                     parent2 = Lucky_Wheel(Population);
 
-                double cara1;
-                double cara2;
-
-                int coin1 = random.Next(0, 1);
-                if (coin1 == 0)
-                    cara1 = parent1.X;
-                else
-                    cara1 = parent2.X;
-
-                int coin2 = random.Next(0, 1);
-                if (coin2 == 0)
-                    cara2 = parent1.Y;
-                else
-                    cara2 = parent2.Y;
-                Kids.Add(new Champion(cara1, cara2, new ID(generation, nb_individual++, 0)));
+                // getting the number of instruction from one parent
+                nb_instru_to_hybride = parent1.Nb_instruction;
+                if (randomyse.Coin() == 1)
+                    nb_instru_to_hybride = parent2.Nb_instruction;
+                
+                // creating the kid
+                for (int j =0; j< nb_instru_to_hybride; j++)
+                {
+                    test_randomyzer.Add(randomyse.Coin());
+                    randomyse = new Randomyzer();
+                    if (randomyse.Coin() == 0)
+                        Kids_instructions.Add(parent1.Instructions[j]);
+                    else
+                        Kids_instructions.Add(parent2.Instructions[j]);
+                }
+                Kids.Add(new Champion(Kids_instructions, new ID(generation+1, nb_individual,0)));
+                nb_individual += 1;
             }
+            /*
             foreach (Champion S in Kids)
                 Population.Add(S);
-*/
+
             return Population;
+            */
+            return Kids;
         }
 
-        public static List<Champion> Mutation(Randomyzer randomyse, List<Champion> Population,Field field, double mutation_rate, int generation)
+        public static List<Champion> Mutation(Randomyzer randomyse, List<Champion> Population, double mutation_rate, int generation)
         {
             int number_to_mutate = (int)Math.Round(Population.Count * mutation_rate);
             List<Champion> Population_after_Mutation = new List<Champion>(Population);
@@ -155,10 +165,10 @@ namespace test_génétique
             return Population_after_Mutation;
         }
 
-     
 
 
-        
+
+
 
     }
 }

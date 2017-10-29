@@ -13,7 +13,10 @@ namespace test_génétique.Instruction_possibles
 
         public And_(List<Parameter> parameters = null) : base (parameters)
         {
+          // Define the differents scenario
+          List<string> possible_combination_1 = new List<string>{"T_REG", "T_REG", "T_REG"};
 
+          parameters_possible_combinations.Add(possible_combination_1);
         }
 
         public override string toString()

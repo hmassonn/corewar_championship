@@ -18,10 +18,10 @@ namespace test_génétique
         }
 
 
-        public void Generate_solutions(int count, Field field)
+        public void Generate_solutions(int count)
         {
             for (int i = 0; i < count; i++)
-                random_pop.Add(Randomyse.Next_solution(field, i));
+                random_pop.Add(Randomyse.Next_solution( i));
         }
 
 
