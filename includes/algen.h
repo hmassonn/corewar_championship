@@ -34,13 +34,21 @@
 #define N_CHILD		10
 #define N_TARGET	1
 #define PATH_CHAMPIONSHIP "champions/"
-#define DELTA_US_MAX 500000
+#define DELTA_US_MAX 10000
 // #define MV_ALL_FILE		for f in *.cor.dmp; do mv "$f" "`echo $f | sed s/.cor.dmp/.s/`"; done
 
-// typedef struct			s_resu
-// {
-// 	int					res[5050][3];
-// }						t_resu;
+typedef struct			s_resu
+{
+	int					cursor;
+	char				res[5051][4];
+}						t_resu;
+
+/*
+**		dans main.c
+*/
+
+void	cursor_plus();
+void	cursuor_mod(int who, int val);
 
 /*
 **		dans initial.c

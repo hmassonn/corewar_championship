@@ -141,6 +141,8 @@ void	ft_run_mars(t_mars *mars, t_cpu *cpu, struct timespec start)
 			if (delta_us > DELTA_US_MAX)
 			{
 				ft_putendl("égualitée");
+				cursuor_mod(2, 0);
+				cursor_plus();
 				return ;
 			}
 		}
