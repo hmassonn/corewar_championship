@@ -1,119 +1,123 @@
-	d Z3, Z-1, Z1
-	d Z3, Z0, Z3
-	d Z16
-	d Z0, Z4
-	d Z4, Z-6
-	d Z-13
-	d Z0
-	d Z42
-	d Z87
-	d Z84
-	d Z81
-	d Z78
-	d Z75
-	d Z72
-	d Z69
-	d Z66
-	d Z63
-	d Z60
-	d Z-40
-	d Z-43
-	d Z51
-	d Z-49
-	d Z42
-	d Z42
-	d Z125
-	d Z122
-	d Z119
-	d Z116
-	d Z113
-	d Z110
-	d Z107
-	d Z104
-	d Z101
-	d Z98
-	d Z95
-	d Z92
-	d Z-94
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z6
-	d Z-83
-	d Z42
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-500
-	d Z8, Z-500
-	d Z8, Z-500
-	d Z8, Z-500
-	d Z8, Z-500
-	d Z8, Z-500
-	d Z8, Z-500
-	d Z8, Z-500
-	d Z8, Z-500
-	d Z8, Z-500
-	d Z8, Z-500
-	d Z8, Z-500
-	d Z8, Z-500
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z8, Z-400
-	d Z-315
+Champion : Generation: 0 Individu: 19 Mutation: 0
+29/10/2017 13:09:34
+ MaChOe team pour vous servire ;)
+
+	sti r3, -1, 1
+	and r3, 0, r3
+	fork 16
+	ld 0, r4
+	st r4, -6
+	zjmp -13
+	live 0
+	live 42
+	fork 87
+	fork 84
+	fork 81
+	fork 78
+	fork 75
+	fork 72
+	fork 69
+	fork 66
+	fork 63
+	fork 60
+	fork -40
+	fork -43
+	fork 51
+	fork -49
+	fork 42
+	fork 42
+	fork 125
+	fork 122
+	fork 119
+	fork 116
+	fork 113
+	fork 110
+	fork 107
+	fork 104
+	fork 101
+	fork 98
+	fork 95
+	fork 92
+	fork -94
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	fork 6
+	fork -83
+	live 42
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -500
+	st r8, -500
+	st r8, -500
+	st r8, -500
+	st r8, -500
+	st r8, -500
+	st r8, -500
+	st r8, -500
+	st r8, -500
+	st r8, -500
+	st r8, -500
+	st r8, -500
+	st r8, -500
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	st r8, -400
+	zjmp -315

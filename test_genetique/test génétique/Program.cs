@@ -56,7 +56,7 @@ namespace test_génétique
                 
                 if (filename.IndexOf(".dmp") > -1) {
                     i += 1;
-                    Champion champion = new Champion(readInstructions(filename), i.ToString());
+                    Champion champion = new Champion(readInstructions(filename), i.ToString(), new ID(0,i,0));
                     champions.Add(champion);
                 }
             }

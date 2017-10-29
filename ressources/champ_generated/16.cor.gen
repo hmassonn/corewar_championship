@@ -1,61 +1,65 @@
-	d Z1, Z63
-	d Z6, Z-4
-	d Z53, Z1
-	d Z0, Z7
-	d Z45
-	d Z66
-	d Z-5, Z3, Z1
-	d Z1, Z-173, Z3
-	d Z3, Z4, Z3
-	d Z5, Z3, Z6
-	d Z3
-	d Z3, Z3, Z3
-	d Z-207
-	d Z1, Z1
-	d Z1, Z7, Z1
-	d Z66
-	d Z2, Z-64, Z-60
-	d Z4, Z4
-	d Z2, Z512
-	d Z48, Z5
-	d Z1, Z-80, Z1
-	d Z1, Z150, Z1
-	d Z1, Z35, Z1
-	d Z1, Z33, Z1
-	d Z1, Z31, Z1
-	d Z1, Z29, Z1
-	d Z1, Z27, Z1
-	d Z66
-	d Z66
-	d Z66
-	d Z66
-	d Z66
-	d Z-25
-	d Z3, Z3, Z3
-	d Z1, Z7, Z1
-	d Z66
-	d Z-45
-	d Z1, Z28, Z1
-	d Z1, Z21, Z9
-	d Z1, Z14, Z17
-	d Z1, Z7, Z25
-	d Z66
-	d Z-210
-	d Z66
-	d Z-13
-	d Z66
-	d Z11
-	d Z66
-	d Z-234
-	d Z66
-	d Z-5, Z3, Z1
-	d Z1, Z147, Z3
-	d Z3, Z4, Z3
-	d Z5, Z3, Z3
-	d Z23
-	d Z0, Z7
-	d Z13
-	d Z0, Z7
-	d Z-47
-	d Z3, Z3, Z3
-	d Z113
+Champion : Generation: 0 Individu: 16 Mutation: 0
+29/10/2017 13:09:34
+ MaChOe team pour vous servire ;)
+
+	st r1, 63
+	st r6, -4
+	ld 53, r1
+	ld 0, r7
+	zjmp 45
+	live 66
+	ldi -5, r3, r1
+	sti r1, -173, r3
+	add r3, r4, r3
+	xor r5, r3, r6
+	zjmp 3
+	xor r3, r3, r3
+	zjmp -207
+	st r1, r1
+	sti r1, 7, 1
+	live 66
+	sti r2, -64, -60
+	ld 4, r4
+	st r2, 512
+	ld 48, r5
+	sti r1, -80, 1
+	sti r1, 150, 1
+	sti r1, 35, 1
+	sti r1, 33, 1
+	sti r1, 31, 1
+	sti r1, 29, 1
+	sti r1, 27, 1
+	live 66
+	live 66
+	live 66
+	live 66
+	live 66
+	zjmp -25
+	xor r3, r3, r3
+	sti r1, 7, 1
+	live 66
+	fork -45
+	sti r1, 28, 1
+	sti r1, 21, 9
+	sti r1, 14, 17
+	sti r1, 7, 25
+	live 66
+	fork -210
+	live 66
+	fork -13
+	live 66
+	fork 11
+	live 66
+	zjmp -234
+	live 66
+	ldi -5, r3, r1
+	sti r1, 147, r3
+	add r3, r4, r3
+	xor r5, r3, r3
+	zjmp 23
+	ld 0, r7
+	zjmp 13
+	ld 0, r7
+	zjmp -47
+	xor r3, r3, r3
+	zjmp 113

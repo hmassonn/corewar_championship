@@ -22,7 +22,7 @@ namespace test_génétique
             this.parameters = parameters;
         }
 
-        public string toString()
+        public virtual string toString()
         {
             string res = red_code + " ";
 

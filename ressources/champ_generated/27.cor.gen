@@ -1,9 +1,13 @@
-	d Z32, Z3
-	d Z4, Z4
-	d Z190, Z5
-	d Z1, Z6
-	d Z666
-	d Z5, Z5, Z3
-	d Z3, Z4, Z5
-	d Z0, Z16
-	d Z-22
+Champion : Generation: 0 Individu: 27 Mutation: 0
+29/10/2017 13:09:34
+ MaChOe team pour vous servire ;)
+
+	ld 32, r3
+	ld 4, r4
+	ld 190, r5
+	st r1, 6
+	live 666
+	sti r5, r5, r3
+	add r3, r4, r5
+	ld 0, r16
+	zjmp -22

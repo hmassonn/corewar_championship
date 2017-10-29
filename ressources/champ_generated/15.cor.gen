@@ -1,117 +1,121 @@
-	d Z1, Z391, Z1
-	d Z1, Z399, Z1
-	d Z1, Z400, Z1
-	d Z1, Z87, Z1
-	d Z1, Z397, Z1
-	d Z1, Z390, Z9
-	d Z1, Z383, Z17
-	d Z1, Z421, Z1
-	d Z1, Z393, Z2
-	d Z1, Z461, Z1
-	d Z1, Z454, Z9
-	d Z1, Z408, Z1
-	d Z0, Z16
-	d Z323
-	d Z0, Z2
-	d Z0, Z16
-	d Z4902343
-	d Z2, Z-24
-	d Z2, Z-33
-	d Z2, Z-42
-	d Z2, Z-51
-	d Z2, Z-60
-	d Z2, Z-69
-	d Z2, Z-78
-	d Z2, Z-87
-	d Z2, Z-96
-	d Z2, Z-105
-	d Z2, Z-114
-	d Z2, Z-123
-	d Z2, Z-132
-	d Z2, Z-141
-	d Z2, Z-150
-	d Z2, Z-159
-	d Z2, Z-168
-	d Z2, Z-177
-	d Z2, Z-186
-	d Z2, Z-195
-	d Z2, Z-204
-	d Z2, Z-213
-	d Z2, Z-222
-	d Z2, Z-231
-	d Z2, Z-240
-	d Z2, Z-249
-	d Z2, Z-258
-	d Z2, Z-267
-	d Z2, Z-276
-	d Z2, Z-285
-	d Z2, Z-294
-	d Z2, Z-303
-	d Z2, Z-312
-	d Z2, Z-321
-	d Z2, Z-330
-	d Z2, Z-339
-	d Z2, Z-348
-	d Z2, Z-357
-	d Z2, Z-366
-	d Z2, Z-375
-	d Z2, Z-384
-	d Z2, Z-393
-	d Z2, Z-402
-	d Z2, Z-411
-	d Z2, Z-420
-	d Z2, Z-429
-	d Z2, Z-438
-	d Z2, Z-447
-	d Z2, Z-456
-	d Z2, Z-465
-	d Z2, Z-474
-	d Z2, Z-483
-	d Z2, Z-492
-	d Z2, Z-501
-	d Z2, Z-510
-	d Z-280
-	d Z4239423
-	d Z-5
-	d Z0, Z16
-	d Z3442302
-	d Z-5
-	d Z4320423
-	d Z3
-	d Z-8
-	d Z4329034
-	d Z94
-	d Z3401123
-	d Z47
-	d Z4590543
-	d Z132
-	d Z0, Z2
-	d Z251883523, Z3
-	d Z0, Z16
-	d Z4930423
-	d Z0, Z16
-	d Z120
-	d Z4342342
-	d Z-396
-	d Z251883523, Z2
-	d Z386101251, Z3
-	d Z0, Z16
-	d Z0, Z16
-	d Z81
-	d Z4239013
-	d Z-104
-	d Z4093282
-	d Z-146
-	d Z-65280, Z2
-	d Z436432899, Z3
-	d Z0, Z16
-	d Z0, Z16
-	d Z0, Z16
-	d Z27
-	d Z57672192, Z2
-	d Z318992387, Z3
-	d Z0, Z16
-	d Z3
-	d Z2, Z15
-	d Z3, Z-1
-	d Z0
+Champion : Generation: 0 Individu: 15 Mutation: 0
+29/10/2017 13:09:34
+ MaChOe team pour vous servire ;)
+
+	sti r1, 391, 1
+	sti r1, 399, 1
+	sti r1, 400, 1
+	sti r1, 87, 1
+	sti r1, 397, 1
+	sti r1, 390, 9
+	sti r1, 383, 17
+	sti r1, 421, 1
+	sti r1, 393, 2
+	sti r1, 461, 1
+	sti r1, 454, 9
+	sti r1, 408, 1
+	ld 0, r16
+	fork 323
+	ld 0, r2
+	ld 0, r16
+	live 4902343
+	st r2, -24
+	st r2, -33
+	st r2, -42
+	st r2, -51
+	st r2, -60
+	st r2, -69
+	st r2, -78
+	st r2, -87
+	st r2, -96
+	st r2, -105
+	st r2, -114
+	st r2, -123
+	st r2, -132
+	st r2, -141
+	st r2, -150
+	st r2, -159
+	st r2, -168
+	st r2, -177
+	st r2, -186
+	st r2, -195
+	st r2, -204
+	st r2, -213
+	st r2, -222
+	st r2, -231
+	st r2, -240
+	st r2, -249
+	st r2, -258
+	st r2, -267
+	st r2, -276
+	st r2, -285
+	st r2, -294
+	st r2, -303
+	st r2, -312
+	st r2, -321
+	st r2, -330
+	st r2, -339
+	st r2, -348
+	st r2, -357
+	st r2, -366
+	st r2, -375
+	st r2, -384
+	st r2, -393
+	st r2, -402
+	st r2, -411
+	st r2, -420
+	st r2, -429
+	st r2, -438
+	st r2, -447
+	st r2, -456
+	st r2, -465
+	st r2, -474
+	st r2, -483
+	st r2, -492
+	st r2, -501
+	st r2, -510
+	zjmp -280
+	live 4239423
+	fork -5
+	ld 0, r16
+	live 3442302
+	zjmp -5
+	live 4320423
+	zjmp 3
+	fork -8
+	live 4329034
+	fork 94
+	live 3401123
+	fork 47
+	live 4590543
+	fork 132
+	ld 0, r2
+	ld 251883523, r3
+	ld 0, r16
+	live 4930423
+	ld 0, r16
+	zjmp 120
+	live 4342342
+	fork -396
+	ld 251883523, r2
+	ld 386101251, r3
+	ld 0, r16
+	ld 0, r16
+	zjmp 81
+	live 4239013
+	fork -104
+	live 4093282
+	fork -146
+	ld -65280, r2
+	ld 436432899, r3
+	ld 0, r16
+	ld 0, r16
+	ld 0, r16
+	zjmp 27
+	ld 57672192, r2
+	ld 318992387, r3
+	ld 0, r16
+	zjmp 3
+	st r2, 15
+	st r3, -1
+	live 0

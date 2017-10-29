@@ -1,121 +1,125 @@
-	d Z0, Z2
-	d Z499
-	d Z-511
-	d Z-42
-	d Z10, Z11, Z13
-	d Z12, Z13, Z13
-	d Z13, Z-255, Z14
-	d Z13
-	d Z0, Z14
-	d Z-33
-	d Z0, Z13
-	d Z-43
-	d Z-42
-	d Z-128, Z6
-	d Z27
-	d Z190056198, Z7
-	d Z0, Z5
-	d Z0, Z16
-	d Z34
-	d Z84541307, Z7
-	d Z4, Z5
-	d Z190056198, Z16
-	d Z16, Z-490
-	d Z7, Z-491
-	d Z0, Z2
-	d Z-511
-	d Z42, Z42, Z16
-	d Z-42
-	d Z1, Z-138, Z1
-	d Z57672959, Z10
-	d Z-30, Z11
-	d Z-5, Z12
-	d Z1, Z6
-	d Z-42
-	d Z-176
-	d Z-165, Z13
-	d Z0, Z2
-	d Z-22
-	d Z1, Z56, Z1
-	d Z1, Z91, Z1
-	d Z-77
-	d Z1, Z6
-	d Z-42
-	d Z1, Z1, Z7
-	d Z1880161814, Z9
-	d Z1879571989, Z10
-	d Z34209281, Z11
-	d Z45
-	d Z-42
-	d Z13
-	d Z0, Z2
-	d Z153
-	d Z191104768, Z7
-	d Z5, Z6
-	d Z0, Z2
-	d Z59
-	d Z-42
-	d Z27
-	d Z101056768, Z7
-	d Z9, Z6
-	d Z0, Z2
-	d Z27
-	d Z0, Z2
-	d Z12, Z6
-	d Z0, Z2
-	d Z3
-	d Z1, Z6
-	d Z-42
-	d Z7, Z6, Z317
-	d Z0, Z2
-	d Z309
-	d Z16, Z191, Z1
-	d Z160
-	d Z24, Z16
-	d Z16, Z174, Z1
-	d Z1, Z6
-	d Z-42
-	d Z0, Z2
-	d Z511
-	d Z16, Z12
-	d Z12, Z9, Z9
-	d Z12, Z10, Z10
-	d Z12, Z11, Z11
-	d Z1, Z6
-	d Z-42
-	d Z0, Z2
-	d Z1, Z-413, Z1
-	d Z9, Z-360, Z1
-	d Z10, Z-362, Z1
-	d Z11, Z-364, Z6
-	d Z-441
-	d Z-241
-	d Z16777216, Z16
-	d Z16, Z-513, Z6
-	d Z1, Z117
-	d Z1, Z68, Z1
-	d Z507, Z4
-	d Z507, Z6
-	d Z1, Z6
-	d Z-42
-	d Z190055170, Z8
-	d Z67699190, Z9
-	d Z8, Z511
-	d Z9, Z510
-	d Z24, Z8
-	d Z-378
-	d Z46
-	d Z-1
-	d Z0, Z2
-	d Z190055682, Z3
-	d Z190056194, Z5
-	d Z190056194, Z7
-	d Z0, Z16
-	d Z448
-	d Z0
-	d Z4, Z2
-	d Z101253622, Z3
-	d Z134807571, Z5
-	d Z134807571, Z7
-	d Z0, Z16
-	d Z405
+Champion : Generation: 0 Individu: 40 Mutation: 0
+29/10/2017 13:09:34
+ MaChOe team pour vous servire ;)
+
+	ld 0, r2
+	zjmp 499
+	zjmp -511
+	live -42
+	sti r10, r11, r13
+	add r12, r13, r13
+	xor r13, -255, r14
+	zjmp 13
+	ld 0, r14
+	zjmp -33
+	ld 0, r13
+	zjmp -43
+	live -42
+	ld -128, r6
+	fork 27
+	ld 190056198, r7
+	ld 0, r5
+	ld 0, r16
+	zjmp 34
+	ld 84541307, r7
+	ld 4, r5
+	ld 190056198, r16
+	st r16, -490
+	st r7, -491
+	ld 0, r2
+	zjmp -511
+	lldi 42, 42, r16
+	live -42
+	sti r1, -138, 1
+	ld 57672959, r10
+	ld -30, r11
+	ld -5, r12
+	st r1, 6
+	live -42
+	fork -176
+	ld -165, r13
+	ld 0, r2
+	zjmp -22
+	sti r1, 56, 1
+	sti r1, 91, 1
+	fork -77
+	st r1, 6
+	live -42
+	or r1, r1, r7
+	ld 1880161814, r9
+	ld 1879571989, r10
+	ld 34209281, r11
+	fork 45
+	live -42
+	fork 13
+	ld 0, r2
+	zjmp 153
+	ld 191104768, r7
+	ld 5, r6
+	ld 0, r2
+	zjmp 59
+	live -42
+	fork 27
+	ld 101056768, r7
+	ld 9, r6
+	ld 0, r2
+	zjmp 27
+	ld 0, r2
+	ld 12, r6
+	ld 0, r2
+	zjmp 3
+	st r1, 6
+	live -42
+	sti r7, r6, 317
+	ld 0, r2
+	zjmp 309
+	sti r16, 191, 1
+	fork 160
+	ld 24, r16
+	sti r16, 174, 1
+	st r1, 6
+	live -42
+	ld 0, r2
+	zjmp 511
+	ld 16, r12
+	add r12, r9, r9
+	add r12, r10, r10
+	add r12, r11, r11
+	st r1, 6
+	live -42
+	ld 0, r2
+	sti r1, -413, 1
+	sti r9, -360, 1
+	sti r10, -362, 1
+	sti r11, -364, 6
+	fork -441
+	zjmp -241
+	ld 16777216, r16
+	sti r16, -513, 6
+	st r1, 117
+	sti r1, 68, 1
+	ld 507, r4
+	ld 507, r6
+	st r1, 6
+	live -42
+	ld 190055170, r8
+	ld 67699190, r9
+	st r8, 511
+	st r9, 510
+	ld 24, r8
+	fork -378
+	fork 46
+	live -1
+	ld 0, r2
+	ld 190055682, r3
+	ld 190056194, r5
+	ld 190056194, r7
+	ld 0, r16
+	zjmp 448
+	live 0
+	ld 4, r2
+	ld 101253622, r3
+	ld 134807571, r5
+	ld 134807571, r7
+	ld 0, r16
+	zjmp 405

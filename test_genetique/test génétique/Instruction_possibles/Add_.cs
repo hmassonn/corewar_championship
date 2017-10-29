@@ -18,7 +18,21 @@ namespace test_génétique.Instruction_possibles
             para_possible.Add(new Registre());
             para_possible.Add(new Registre());
             */
-
         }
+
+        public override string toString()
+        {
+            string res = red_code + " ";
+
+            foreach (Parameter parameter in parameters)
+            {
+                res += parameter.toString() + ", ";
+            }
+
+            res = res.Substring(0, res.Length - 2); //TODO :: vérifier si la taille est OK
+
+            return res;
+        }
+
     }
 }

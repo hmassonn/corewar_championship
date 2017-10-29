@@ -1,103 +1,107 @@
-	d Z1, Z210, Z1
-	d Z1, Z120, Z1
-	d Z1, Z204, Z1
-	d Z1, Z52, Z1
-	d Z1, Z273, Z1
-	d Z1, Z60, Z1
-	d Z1, Z68, Z1
-	d Z1, Z355, Z1
-	d Z1, Z411, Z1
-	d Z0, Z16
-	d Z140
-	d Z314
-	d Z31415926, Z2
-	d Z0, Z16
-	d Z126
-	d Z314
-	d Z0, Z16
-	d Z194
-	d Z62821932, Z5
-	d Z0, Z16
-	d Z280
-	d Z314
-	d Z2, Z-450
-	d Z2, Z-450
-	d Z2, Z-450
-	d Z2, Z-450
-	d Z2, Z-450
-	d Z2, Z-450
-	d Z2, Z-450
-	d Z2, Z-450
-	d Z2, Z-450
-	d Z2, Z-450
-	d Z2, Z-450
-	d Z2, Z-450
-	d Z2, Z-450
-	d Z2, Z-450
-	d Z2, Z-450
-	d Z-80
-	d Z314
-	d Z-5
-	d Z314
-	d Z2, Z450
-	d Z2, Z450
-	d Z2, Z450
-	d Z2, Z450
-	d Z2, Z450
-	d Z2, Z450
-	d Z2, Z450
-	d Z2, Z450
-	d Z2, Z450
-	d Z2, Z450
-	d Z2, Z450
-	d Z2, Z450
-	d Z2, Z450
-	d Z2, Z450
-	d Z2, Z450
-	d Z-80
-	d Z314
-	d Z314
-	d Z314
-	d Z314
-	d Z314
-	d Z314
-	d Z314
-	d Z314
-	d Z314
-	d Z314
-	d Z314
-	d Z314
-	d Z314
-	d Z314
-	d Z314
-	d Z314
-	d Z314
-	d Z314
-	d Z314
-	d Z314
-	d Z-306
-	d Z63
-	d Z5, Z500
-	d Z5, Z500
-	d Z5, Z500
-	d Z5, Z500
-	d Z5, Z500
-	d Z5, Z500
-	d Z5, Z500
-	d Z5, Z500
-	d Z5, Z500
-	d Z5, Z500
-	d Z5, Z500
-	d Z5, Z500
-	d Z5, Z500
-	d Z5, Z500
-	d Z5, Z500
-	d Z5, Z500
-	d Z5, Z500
-	d Z5, Z500
-	d Z5, Z500
-	d Z5, Z500
-	d Z5, Z500
-	d Z5, Z500
-	d Z5, Z500
-	d Z5, Z500
+Champion : Generation: 0 Individu: 17 Mutation: 0
+29/10/2017 13:09:34
+ MaChOe team pour vous servire ;)
+
+	sti r1, 210, 1
+	sti r1, 120, 1
+	sti r1, 204, 1
+	sti r1, 52, 1
+	sti r1, 273, 1
+	sti r1, 60, 1
+	sti r1, 68, 1
+	sti r1, 355, 1
+	sti r1, 411, 1
+	ld 0, r16
+	fork 140
+	live 314
+	ld 31415926, r2
+	ld 0, r16
+	fork 126
+	live 314
+	ld 0, r16
+	fork 194
+	ld 62821932, r5
+	ld 0, r16
+	fork 280
+	live 314
+	st r2, -450
+	st r2, -450
+	st r2, -450
+	st r2, -450
+	st r2, -450
+	st r2, -450
+	st r2, -450
+	st r2, -450
+	st r2, -450
+	st r2, -450
+	st r2, -450
+	st r2, -450
+	st r2, -450
+	st r2, -450
+	st r2, -450
+	zjmp -80
+	live 314
+	zjmp -5
+	live 314
+	st r2, 450
+	st r2, 450
+	st r2, 450
+	st r2, 450
+	st r2, 450
+	st r2, 450
+	st r2, 450
+	st r2, 450
+	st r2, 450
+	st r2, 450
+	st r2, 450
+	st r2, 450
+	st r2, 450
+	st r2, 450
+	st r2, 450
+	zjmp -80
+	live 314
+	live 314
+	live 314
+	live 314
+	live 314
+	live 314
+	live 314
+	live 314
+	live 314
+	live 314
+	live 314
+	live 314
+	live 314
+	live 314
+	live 314
+	live 314
+	live 314
+	live 314
+	live 314
+	live 314
+	zjmp -306
+	zjmp 63
+	st r5, 500
+	st r5, 500
+	st r5, 500
+	st r5, 500
+	st r5, 500
+	st r5, 500
+	st r5, 500
+	st r5, 500
+	st r5, 500
+	st r5, 500
+	st r5, 500
+	st r5, 500
+	st r5, 500
+	st r5, 500
+	st r5, 500
+	st r5, 500
+	st r5, 500
+	st r5, 500
+	st r5, 500
+	st r5, 500
+	st r5, 500
+	st r5, 500
+	st r5, 500
+	st r5, 500

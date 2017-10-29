@@ -9,7 +9,7 @@ namespace test_génétique.Parameters
 {
     public class Indirect : Parameter
     {
-        public static string red_code = "";
+        public override string redcode => "";
 
         public const int VALUE_MIN = -4000;
         public const int VALUE_MAX = 4000;
@@ -22,11 +22,6 @@ namespace test_génétique.Parameters
         public static string getRedCode()
         {
             return "";
-        }
-
-        public string toString()
-        {
-            return this.value;
         }
 
     }

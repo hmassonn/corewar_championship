@@ -1,25 +1,29 @@
-	d Z1, Z106
-	d Z1, Z106
-	d Z1, Z106
-	d Z1, Z106
-	d Z1, Z106
-	d Z1, Z106
-	d Z1, Z106
-	d Z1, Z106
-	d Z1, Z106
-	d Z1, Z106
-	d Z1, Z106
-	d Z1, Z106
-	d Z1, Z106
-	d Z1, Z106
-	d Z1, Z106
-	d Z1, Z106
-	d Z1, Z106
-	d Z1, Z106
-	d Z1, Z106
-	d Z1, Z106
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z-20
+Champion : Generation: 0 Individu: 5 Mutation: 0
+29/10/2017 13:09:33
+ MaChOe team pour vous servire ;)
+
+	st r1, 106
+	st r1, 106
+	st r1, 106
+	st r1, 106
+	st r1, 106
+	st r1, 106
+	st r1, 106
+	st r1, 106
+	st r1, 106
+	st r1, 106
+	st r1, 106
+	st r1, 106
+	st r1, 106
+	st r1, 106
+	st r1, 106
+	st r1, 106
+	st r1, 106
+	st r1, 106
+	st r1, 106
+	st r1, 106
+	live 1
+	live 1
+	live 1
+	live 1
+	zjmp -20

@@ -1,127 +1,131 @@
-	d Z80
-	d Z0
-	d Z82
-	d Z251658255, Z2
-	d Z1, Z12
-	d Z40, Z11
-	d Z1, Z11
-	d Z16, Z-4
-	d Z0
-	d Z16, Z-300
-	d Z2, Z-301
-	d Z2, Z-302
-	d Z11, Z12, Z11
-	d Z33
-	d Z0, Z16
-	d Z-35
-	d Z0, Z16
-	d Z462
-	d Z0, Z16
-	d Z395
-	d Z-58, Z1, Z13
-	d Z0, Z16
-	d Z13, Z6
-	d Z0
-	d Z-5
-	d Z13, Z6
-	d Z0
-	d Z44
-	d Z190056971, Z10
-	d Z135004416, Z7
-	d Z273, Z8
-	d Z270, Z11
-	d Z0, Z12
-	d Z44
-	d Z299
-	d Z202068999, Z10
-	d Z13, Z7
-	d Z276, Z8
-	d Z274, Z11
-	d Z0, Z12
-	d Z6
-	d Z261
-	d Z3
-	d Z10, Z11, Z12
-	d Z7, Z8, Z12
-	d Z0
-	d Z10, Z11, Z12
-	d Z7, Z8, Z12
-	d Z0
-	d Z10, Z11, Z12
-	d Z7, Z8, Z12
-	d Z0
-	d Z10, Z11, Z12
-	d Z7, Z8, Z12
-	d Z0
-	d Z10, Z11, Z12
-	d Z7, Z8, Z12
-	d Z0
-	d Z10, Z11, Z12
-	d Z7, Z8, Z12
-	d Z0
-	d Z10, Z11, Z12
-	d Z7, Z8, Z12
-	d Z0
-	d Z10, Z11, Z12
-	d Z7, Z8, Z12
-	d Z0
-	d Z10, Z11, Z12
-	d Z7, Z8, Z12
-	d Z0
-	d Z10, Z11, Z12
-	d Z7, Z8, Z12
-	d Z0
-	d Z10, Z11, Z12
-	d Z7, Z8, Z12
-	d Z0
-	d Z10, Z11, Z12
-	d Z7, Z8, Z12
-	d Z0
-	d Z10, Z11, Z12
-	d Z7, Z8, Z12
-	d Z0
-	d Z10, Z11, Z12
-	d Z7, Z8, Z12
-	d Z0
-	d Z10, Z11, Z12
-	d Z7, Z8, Z12
-	d Z0
-	d Z10, Z11, Z12
-	d Z7, Z8, Z12
-	d Z0
-	d Z10, Z11, Z12
-	d Z7, Z8, Z12
-	d Z0
-	d Z10, Z11, Z12
-	d Z7, Z8, Z12
-	d Z0
-	d Z0
-	d Z190055943, Z10
-	d Z84476405, Z11
-	d Z150994956, Z3
-	d Z150994956, Z6
-	d Z26, Z7
-	d Z495, Z4
-	d Z0, Z5
-	d Z106
-	d Z0
-	d Z190055943, Z10
-	d Z84476405, Z11
-	d Z41
-	d Z190055172, Z3
-	d Z190055172, Z6
-	d Z507, Z7
-	d Z24, Z4
-	d Z0, Z5
-	d Z46
-	d Z0
-	d Z84475923, Z3
-	d Z84475923, Z6
-	d Z511, Z7
-	d Z28, Z4
-	d Z0, Z5
-	d Z3
-	d Z0
-	d Z10, Z511
-	d Z11, Z510
-	d Z501
+Champion : Generation: 0 Individu: 1 Mutation: 0
+29/10/2017 13:09:33
+ MaChOe team pour vous servire ;)
+
+	fork 80
+	live 0
+	fork 82
+	ld 251658255, r2
+	ld 1, r12
+	ld 40, r11
+	st r1, 11
+	st r16, -4
+	live 0
+	st r16, -300
+	st r2, -301
+	st r2, -302
+	sub r11, r12, r11
+	zjmp 33
+	ld 0, r16
+	zjmp -35
+	ld 0, r16
+	zjmp 462
+	ld 0, r16
+	zjmp 395
+	ldi -58, 1, r13
+	ld 0, r16
+	st r13, 6
+	live 0
+	fork -5
+	st r13, 6
+	live 0
+	fork 44
+	ld 190056971, r10
+	ld 135004416, r7
+	ld 273, r8
+	ld 270, r11
+	ld 0, r12
+	fork 44
+	zjmp 299
+	ld 202068999, r10
+	st r13, r7
+	ld 276, r8
+	ld 274, r11
+	ld 0, r12
+	fork 6
+	zjmp 261
+	zjmp 3
+	sti r10, r11, r12
+	sti r7, r8, r12
+	live 0
+	sti r10, r11, r12
+	sti r7, r8, r12
+	live 0
+	sti r10, r11, r12
+	sti r7, r8, r12
+	live 0
+	sti r10, r11, r12
+	sti r7, r8, r12
+	live 0
+	sti r10, r11, r12
+	sti r7, r8, r12
+	live 0
+	sti r10, r11, r12
+	sti r7, r8, r12
+	live 0
+	sti r10, r11, r12
+	sti r7, r8, r12
+	live 0
+	sti r10, r11, r12
+	sti r7, r8, r12
+	live 0
+	sti r10, r11, r12
+	sti r7, r8, r12
+	live 0
+	sti r10, r11, r12
+	sti r7, r8, r12
+	live 0
+	sti r10, r11, r12
+	sti r7, r8, r12
+	live 0
+	sti r10, r11, r12
+	sti r7, r8, r12
+	live 0
+	sti r10, r11, r12
+	sti r7, r8, r12
+	live 0
+	sti r10, r11, r12
+	sti r7, r8, r12
+	live 0
+	sti r10, r11, r12
+	sti r7, r8, r12
+	live 0
+	sti r10, r11, r12
+	sti r7, r8, r12
+	live 0
+	sti r10, r11, r12
+	sti r7, r8, r12
+	live 0
+	sti r10, r11, r12
+	sti r7, r8, r12
+	live 0
+	live 0
+	ld 190055943, r10
+	ld 84476405, r11
+	ld 150994956, r3
+	ld 150994956, r6
+	ld 26, r7
+	ld 495, r4
+	ld 0, r5
+	zjmp 106
+	live 0
+	ld 190055943, r10
+	ld 84476405, r11
+	fork 41
+	ld 190055172, r3
+	ld 190055172, r6
+	ld 507, r7
+	ld 24, r4
+	ld 0, r5
+	zjmp 46
+	live 0
+	ld 84475923, r3
+	ld 84475923, r6
+	ld 511, r7
+	ld 28, r4
+	ld 0, r5
+	zjmp 3
+	live 0
+	st r10, 511
+	st r11, 510
+	zjmp 501

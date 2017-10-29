@@ -1,4 +1,8 @@
-	d Z1, Z6
-	d Z0
-	d Z0, Z2
-	d Z-17
+Champion : Generation: 0 Individu: 26 Mutation: 0
+29/10/2017 13:09:34
+ MaChOe team pour vous servire ;)
+
+	st r1, 6
+	live 0
+	ld 0, r2
+	zjmp -17

@@ -31,13 +31,14 @@ namespace test_génétique
         }
 
         public void generateRedCode()
-        {
+        {            
             if (id_str.Equals(null))
                 this.id_str = "default";
 
             string path = Program.CHAMPIONS_NEW_FOLDER + id_str + ".cor.gen";
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(path))
             {
+                file.WriteLine("Champion : "+this.Id.ToString()+"\n" + DateTime.Now.ToString()+ "\n MaChOe team pour vous servire ;)"+ "\n");
                 foreach (Instruction instruction in Instructions)
                 {
                     file.WriteLine("\t"+instruction.toString());

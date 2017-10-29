@@ -1,5 +1,9 @@
-	d Z1, Z15, Z1
-	d Z1, Z0, Z1
-	d Z42
-	d Z-5
-	d Z42, Z5, Z
+Champion : Generation: 0 Individu: 31 Mutation: 0
+29/10/2017 13:09:34
+ MaChOe team pour vous servire ;)
+
+	sti r1, 15, 1
+	and r1, 0, r1
+	live 42
+	zjmp -5
+	lld 42, r5, 

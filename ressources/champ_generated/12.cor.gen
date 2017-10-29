@@ -1,79 +1,83 @@
-	d Z1, Z211, Z1
-	d Z1, Z38, Z1
-	d Z1, Z39, Z1
-	d Z1, Z198, Z1
-	d Z1111638594, Z2
-	d Z0, Z16
-	d Z169
-	d Z1
-	d Z169
-	d Z1
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z2, Z350
-	d Z-155
-	d Z1
-	d Z-5
-	d Z1
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z2, Z-400
-	d Z-175
+Champion : Generation: 0 Individu: 12 Mutation: 0
+29/10/2017 13:09:34
+ MaChOe team pour vous servire ;)
+
+	sti r1, 211, 1
+	sti r1, 38, 1
+	sti r1, 39, 1
+	sti r1, 198, 1
+	ld 1111638594, r2
+	ld 0, r16
+	fork 169
+	live 1
+	fork 169
+	live 1
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	st r2, 350
+	zjmp -155
+	live 1
+	zjmp -5
+	live 1
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	st r2, -400
+	zjmp -175

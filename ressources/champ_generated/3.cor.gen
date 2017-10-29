@@ -1,86 +1,90 @@
-	d Z0, Z2
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1, Z211
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z1
-	d Z-210
+Champion : Generation: 0 Individu: 3 Mutation: 0
+29/10/2017 13:09:33
+ MaChOe team pour vous servire ;)
+
+	ld 0, r2
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	st r1, 211
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	live 1
+	zjmp -210
