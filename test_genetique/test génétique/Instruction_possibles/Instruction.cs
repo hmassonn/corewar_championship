@@ -10,7 +10,7 @@ namespace test_génétique
     public class Instruction
     {
         //public string type_I { get; private set; }
-        public List <Parameter> para_possible { get; protected set; }
+        public List<string[]> parameters_possible_combinations = new List<string[]>();
         public List<Parameter> parameters { get; set; }
 
         public int weight_I { get; private set; }

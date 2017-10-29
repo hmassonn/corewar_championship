@@ -13,6 +13,27 @@ namespace test_génétique.Instruction_possibles
 
         public Xor(List<Parameter> parameters = null) : base(parameters)
         {
+          List<string> possible_combination_1 = new List<string>{"T_REG", "T_REG", "T_REG"};
+          List<string> possible_combination_2 = new List<string>{"T_REG", "T_IND", "T_REG"};
+          List<string> possible_combination_3 = new List<string>{"T_REG", "T_DIR", "T_REG"};
+
+          List<string> possible_combination_4 = new List<string>{"T_IND", "T_REG", "T_REG"};
+          List<string> possible_combination_5 = new List<string>{"T_IND", "T_IND", "T_REG"};
+          List<string> possible_combination_6 = new List<string>{"T_IND", "T_DIR", "T_REG"};
+
+          List<string> possible_combination_7 = new List<string>{"T_DIR", "T_REG", "T_REG"};
+          List<string> possible_combination_8 = new List<string>{"T_DIR", "T_IND", "T_REG"};
+          List<string> possible_combination_9 = new List<string>{"T_DIR", "T_DIR", "T_REG"};
+
+          parameters_possible_combinations.Add(possible_combination_1);
+          parameters_possible_combinations.Add(possible_combination_2);
+          parameters_possible_combinations.Add(possible_combination_3);
+          parameters_possible_combinations.Add(possible_combination_4);
+          parameters_possible_combinations.Add(possible_combination_5);
+          parameters_possible_combinations.Add(possible_combination_6);
+          parameters_possible_combinations.Add(possible_combination_7);
+          parameters_possible_combinations.Add(possible_combination_8);
+          parameters_possible_combinations.Add(possible_combination_9);
         }
 
         public override string toString()

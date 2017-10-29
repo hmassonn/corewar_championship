@@ -13,7 +13,10 @@ namespace test_génétique.Instruction_possibles
 
         public Fork_(List<Parameter> parameters = null) : base(parameters)
         {
-            //para_possible.Add(new Direct ());
+          // Define the differents scenario
+          List<string> possible_combination_1 = new List<string>{"T_DIR"};
+
+          parameters_possible_combinations.Add(possible_combination_1);
         }
 
         public override string toString()
