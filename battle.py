@@ -1,15 +1,14 @@
 #!/usr/bin/python3
 
 from os import path, system, walk, listdir, unlink
-import subprocess 
+import subprocess
 from operator import itemgetter
 import json
 
 from threading import Thread
 
-OUR_CHAMP = 'stealy.cor'
+OUR_CHAMP = 'double_dash.cor'
 champions_pth = './champions/'
-
 POOL_SIZE = 16
 TIMEOUT = 0.5
 
