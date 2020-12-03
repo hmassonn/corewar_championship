@@ -13,8 +13,8 @@ namespace test_génétique
     class Program
     {
 
-        public const string CHAMPIONS_FOLDER = @"D:\Hugo\corewar_championship\ressources\champstest\"; //TODO: ASSIGN THIS VALUE
-        public const string CHAMPIONS_NEW_FOLDER = @"D:\Hugo\corewar_championship\ressources\champ_generated\";
+        public const string CHAMPIONS_FOLDER = @"D:\path\corewar_championship\ressources\champstest\"; //TODO: ASSIGN THIS VALUE
+        public const string CHAMPIONS_NEW_FOLDER = @"D:\path\corewar_championship\ressources\champ_generated\";
 
         static void Main(string[] args)
         {
